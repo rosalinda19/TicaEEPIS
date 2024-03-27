@@ -28,4 +28,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+Route::get('/bukti', function () {
+    return view('Front/Bukti-publikasi');
+});
+
+require __DIR__ . '/auth.php';
