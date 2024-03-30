@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('upload_publikasis', function (Blueprint $table) {
-            $table->increments("upload_publikasi_id");
+            $table->id();
             $table->string("nrp");
             $table->string("seminar_tesis");
             $table->date("tanggal");
