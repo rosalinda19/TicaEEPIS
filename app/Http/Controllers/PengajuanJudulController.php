@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\PengajuanJudul;
 use App\Http\Requests\StorePengajuanJudulRequest;
 use App\Http\Requests\UpdatePengajuanJudulRequest;
+use App\Models\PengajuanJudul;
 
 class PengajuanJudulController extends Controller
 {
-    
     public function index()
     {
         return view();

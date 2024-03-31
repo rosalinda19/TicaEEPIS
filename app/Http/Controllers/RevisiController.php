@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Revisi;
 use App\Http\Requests\StoreRevisiRequest;
 use App\Http\Requests\UpdateRevisiRequest;
+use App\Models\Revisi;
 
 class RevisiController extends Controller
 {

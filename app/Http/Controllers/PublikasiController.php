@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Publikasi;
 use App\Http\Requests\StorePublikasiRequest;
 use App\Http\Requests\UpdatePublikasiRequest;
+use App\Models\Publikasi;
 
 class PublikasiController extends Controller
 {

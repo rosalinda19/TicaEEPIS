@@ -4,7 +4,6 @@ namespace App\Policies;
 
 use App\Models\SeminarTesis_1;
 use App\Models\User;
-use Illuminate\Auth\Access\Response;
 
 class SeminarTesis1Policy
 {

@@ -32,4 +32,4 @@ Route::get('/bukti', function () {
     return view('Front/Bukti-publikasi');
 });
 
-require __DIR__ . '/auth.php';
+require __DIR__.'/auth.php';

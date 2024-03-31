@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('upload_publikasis', function (Blueprint $table) {
             $table->id();
-            $table->string("nrp");
-            $table->string("seminar_tesis");
-            $table->date("tanggal");
-            $table->string("ppt");
+            $table->string('nrp');
+            $table->string('seminar_tesis');
+            $table->date('tanggal');
+            $table->string('ppt');
             $table->timestamps();
         });
     }

@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('seminar_tesis_1s', function (Blueprint $table) {
             $table->id();
-            $table->string("nrp");
-            $table->string("laporan_proposal");
-            $table->string("penerima_naskah");
-            $table->string("seminar_tesis");
-            $table->string("lembar_monitoring");
-            $table->string("video_demo");
-            $table->string("ppt");
+            $table->string('nrp');
+            $table->string('laporan_proposal');
+            $table->string('penerima_naskah');
+            $table->string('seminar_tesis');
+            $table->string('lembar_monitoring');
+            $table->string('video_demo');
+            $table->string('ppt');
             $table->timestamps();
         });
     }

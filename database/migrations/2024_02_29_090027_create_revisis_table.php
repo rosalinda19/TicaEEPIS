@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('revisis', function (Blueprint $table) {
             $table->id();
-            $table->string("nrp");
-            $table->foreignId("jenis_revisi_id")->constrained("jenis_revisis");
-            $table->char("file_path");
-            $table->text("description");
+            $table->string('nrp');
+            $table->foreignId('jenis_revisi_id')->constrained('jenis_revisis');
+            $table->char('file_path');
+            $table->text('description');
             $table->timestamps();
         });
     }

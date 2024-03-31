@@ -13,17 +13,14 @@ return new class extends Migration
     {
         Schema::create('pengajuan_juduls', function (Blueprint $table) {
             $table->id();
-            $table->string("nama");
-            $table->string("nrp");
-            $table->foreignId("program_studi_id")->constrained("program_studis");
-            $table->string("tahun_angkatan");
-            $table->string("tahun_ajaran");
-            $table->string("semester");
-            $table->date("tanggal_upload");
-            $table->text("judul_tesis");
-            $table->string("dosen_pembimbing1");
-            $table->string("dosen_pembimbing2");
-            $table->string("dosen_pembimbing3");
+            $table->text('judul_penelitian');
+            $table->foreignId('program_studi_id')->constrained('program_studis');
+            $table->string('tahun_ajaran');
+            $table->string('semester');
+            $table->date('tanggal_upload');
+            $table->string('dosen_pembimbing1');
+            $table->string('dosen_pembimbing2');
+            $table->string('dosen_pembimbing3');
             $table->timestamps();
         });
     }

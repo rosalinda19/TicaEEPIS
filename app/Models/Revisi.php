@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Revisi extends Model
 {
     use HasFactory;
-    protected $primaryKey = "revisi_id";
+
+    protected $primaryKey = 'revisi_id';
 }
