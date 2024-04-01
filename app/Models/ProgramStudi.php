@@ -9,7 +9,14 @@ class ProgramStudi extends Model
 {
     use HasFactory;
 
+    protected $table = 'program_studis';
+
     protected $fillable = [
         'nama',
     ];
+
+    public function judul()
+    {
+        return $this->hasMany(Judul::class, 'program_studi_id');
+    }
 }

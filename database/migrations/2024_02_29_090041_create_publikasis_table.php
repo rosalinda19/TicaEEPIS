@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('publikasis', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('mahasiswa_id')->constrained('users');
+            $table->foreignId('program_studi_id')->constrained('program_studis');
+            $table->date('tanggal');
+            $table->string('berkas_publikasi');
             $table->timestamps();
         });
     }

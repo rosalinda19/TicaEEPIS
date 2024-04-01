@@ -11,16 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pengajuan_juduls', function (Blueprint $table) {
+        Schema::create('juduls', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('mahasiswa_id')->constrained('users');
             $table->text('judul_penelitian');
             $table->foreignId('program_studi_id')->constrained('program_studis');
+            $table->string('tahun_angkatan');
             $table->string('tahun_ajaran');
-            $table->string('semester');
+            $table->integer('semester');
+            $table->string('lembar_persetujuan');
             $table->date('tanggal_upload');
             $table->string('dosen_pembimbing1');
-            $table->string('dosen_pembimbing2');
-            $table->string('dosen_pembimbing3');
+            $table->string('dosen_pembimbing2')->nullable();
+            $table->string('dosen_pembimbing3')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pengajuan_juduls');
+        Schema::dropIfExists('juduls');
     }
 };
