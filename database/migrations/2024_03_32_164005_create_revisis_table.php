@@ -11,14 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('seminar_proposals', function (Blueprint $table) {
+        Schema::create('revisis', function (Blueprint $table) {
             $table->id();
-            $table->string('nrp');
-            $table->string('laporan_proposal');
-            $table->string('penerima_naskah');
-            $table->string('seminar_tesis');
-            $table->string('lembar_monitoring');
-            $table->string('ppt');
+            $table->foreignId('seminar_id')->constrained('seminars');
+            $table->char('file_path');
+            $table->text('description');
             $table->timestamps();
         });
     }
@@ -28,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('seminar_proposals');
+        Schema::dropIfExists('revisis');
     }
 };

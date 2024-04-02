@@ -18,5 +18,8 @@ class RoleSeeder extends Seeder
         Role::create([
             'name' => 'mahasiswa',
         ]);
+        Role::create([
+            'name' => 'admin',
+        ]);
     }
 }

@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('upload_publikasis', function (Blueprint $table) {
+        Schema::create('publikasis', function (Blueprint $table) {
             $table->id();
-            $table->string('nrp');
+            $table->foreignId('mahasiswa_id')->constrained('users');
             $table->string('seminar_tesis');
             $table->date('tanggal');
             $table->string('ppt');

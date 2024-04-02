@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('seminars', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('judul_id')->constrained('juduls');
+            $table->foreignid('kategori_id')->constrained('kategoris');
+            $table->string('laporan');
             $table->timestamps();
         });
     }
