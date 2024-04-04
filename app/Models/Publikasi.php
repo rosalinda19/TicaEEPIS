@@ -13,18 +13,27 @@ class Publikasi extends Model
 
     protected $fillable = [
         'mahasiswa_id',
-        'program_studi_id',
-        'tanggal',
-        'berkas_publikasi',
+        'judul',
+        'urutan_penulis',
+        'status',
+        'jenis_jurnal',
+        'nama_jurnal',
+        'volume_dan_nomor',
+        'halaman',
+        'tahun',
+        'link_dokumen',
+        'judul_seminar',
+        'urutan_penulis_seminar',
+        'status',
+        'jenis_seminar',
+        'nama_seminar',
+        'penyelenggara',
+        'tahun_seminar',
+        'link_dokumen_seminar',
     ];
 
     public function mahasiswa()
     {
         return $this->belongsTo(User::class, 'mahasiswa_id');
-    }
-
-    public function programStudi()
-    {
-        return $this->belongsTo(ProgramStudi::class, 'program_studi_id');
     }
 }

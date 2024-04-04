@@ -14,13 +14,12 @@ return new class extends Migration
         Schema::create('juduls', function (Blueprint $table) {
             $table->id();
             $table->foreignId('mahasiswa_id')->constrained('users');
-            $table->text('judul_penelitian');
             $table->foreignId('program_studi_id')->constrained('program_studis');
+            $table->text('judul_penelitian');
             $table->string('tahun_angkatan');
             $table->string('tahun_ajaran');
             $table->integer('semester');
-            $table->string('lembar_persetujuan');
-            $table->date('tanggal_upload');
+            $table->date('tanggal');
             $table->string('dosen_pembimbing1');
             $table->string('dosen_pembimbing2')->nullable();
             $table->string('dosen_pembimbing3')->nullable();

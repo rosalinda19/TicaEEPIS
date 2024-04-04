@@ -13,12 +13,11 @@ class Judul extends Model
 
     protected $fillable = [
         'mahasiswa_id',
-        'judul_penelitian',
         'program_studi_id',
+        'judul_penelitian',
         'tahun_angkatan',
         'tahun_ajaran',
         'semester',
-        'lembar_persetujuan',
         'tanggal_upload',
         'dosen_pembimbing1',
         'dosen_pembimbing2',

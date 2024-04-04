@@ -46,6 +46,11 @@ class User extends Authenticatable
 
     public function judul()
     {
-        return $this->hasMany(Judul::class, 'mahasiswa');
+        return $this->hasOne(Judul::class, 'mahasiswa');
+    }
+
+    public function dataPublikasi()
+    {
+        return $this->hasMany(DataPublikasi::class, 'mahasiswa');
     }
 }

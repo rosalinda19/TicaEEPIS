@@ -16,6 +16,11 @@ return new class extends Migration
             $table->foreignId('judul_id')->constrained('juduls');
             $table->foreignid('kategori_id')->constrained('kategoris');
             $table->string('laporan');
+            $table->string('penerima_naskah');
+            $table->string('persetujuan');
+            $table->string('lembar_monitoring');
+            $table->string('video_demo');
+            $table->string('ppt');
             $table->timestamps();
         });
     }

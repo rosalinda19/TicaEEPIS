@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('publikasis', function (Blueprint $table) {
+        Schema::create('data_publikasis', function (Blueprint $table) {
             $table->id();
             $table->foreignId('mahasiswa_id')->constrained('users');
-            $table->string('seminar_tesis');
             $table->date('tanggal');
-            $table->string('ppt');
+            $table->string('berkas_publikasi');
             $table->timestamps();
         });
     }
