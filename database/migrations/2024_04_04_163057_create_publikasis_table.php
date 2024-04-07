@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('link_dokumen');
             $table->string('judul_seminar');
             $table->string('urutan_penulis_seminar');
-            $table->string('status');
+            $table->string('status_seminar');
             $table->string('jenis_seminar');
             $table->string('nama_seminar');
             $table->string('penyelenggara');

@@ -25,13 +25,6 @@ class UserSeeder extends Seeder
             'email' => 'dsn@tica.id',
             'password' => bcrypt('dsn'),
         ]);
-        $dosen->assignRole('dosen');
-        $admin = User::create([
-            'nrp' => 197107081999031902,
-            'name' => 'admin test',
-            'email' => 'adm@tica.id',
-            'password' => bcrypt('adm'),
-        ]);
-        $admin->assignRole('admin');
+        $dosen->assignRole('kaprodi');
     }
 }

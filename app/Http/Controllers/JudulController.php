@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\JudulRequest;
-use Illuminate\Http\Request;
+use App\Http\Requests\StoreJudulRequest;
+use App\Http\Requests\UpdateJudulRequest;
 use App\Models\Judul;
 
 class JudulController extends Controller
@@ -19,10 +19,28 @@ class JudulController extends Controller
         return view('judul.create');
     }
 
-    public function store(JudulRequest $request)
+    public function store(StoreJudulRequest $request)
     {
         $data = $request->all();
         Judul::create($data);
+        return redirect()->route('judul.index');
+    }
+
+    public function edit(Judul $judul)
+    {
+        return view('judul.edit', compact('judul'));
+    }
+
+    public function update(UpdateJudulRequest $request, Judul $judul)
+    {
+        $data = $request->all();
+        $judul->update($data);
+        return redirect()->route('judul.index');
+    }
+
+    public function destroy(Judul $judul)
+    {
+        $judul->delete();
         return redirect()->route('judul.index');
     }
 }
