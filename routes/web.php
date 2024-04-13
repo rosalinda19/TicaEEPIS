@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Mahasiswa\DataPublikasiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,8 +29,18 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::prefix('mahasiswa')->group(function () {
+    Route::get('/pengajuan-judul')->name('mahasiswa.pengajuan-judul');
+    Route::get('/seminar-proposal')->name('mahasiswa.seminar-proposal');
+    Route::get('/progress-tesis')->name('mahasiswa.progress-tesis');
+    Route::get('/final-tesis')->name('mahasiswa.final-tesis');
+    Route::get('/revisi')->name('mahasiswa.revisi');
+    Route::get('/publikasi')->name('mahasiswa.publikasi');
+    Route::get('/data-publikasi', [DataPublikasiController::class, 'index'])->name('mahasiswa.data-publikasi');
+});
+
 Route::get('/bukti', function () {
     return view('Front/Bukti-publikasi');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
