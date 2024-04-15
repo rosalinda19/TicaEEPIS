@@ -6,7 +6,15 @@
         padding: 0px !important;
     }
 </style>
-
+<nav class="navbar bg-primary" style="height: 80px">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="resource/views/dashboard.blade.php">
+        <img src="../resources/images/Logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        <div class="font-bold text-xl mb-2" style="color: white" >Tica 
+        S2 PascaSarjana PENS</div>
+      </a>
+    </div>
+  </nav>
 <x-guest-layout>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
@@ -34,7 +42,7 @@
             </div>
 
             <div class="flex items-center justify-center mt-8">
-                <x-primary-button class="ms-2" style="height: 40; width: 100; ">
+                <x-primary-button class="ms-2" style="height: 40; width: 80; ">
                     {{ __('Masuk') }}
                 </x-primary-button>
             </div>
