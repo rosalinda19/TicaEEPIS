@@ -10,6 +10,13 @@
                         <img class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200"
                             src="/assets/img/pens-putih.png">
                     </a>
+                    <div>
+                        <div class="font-bold text-l mb-2" style="color: white">
+                            Tica</div>
+                        <div class="font-bold text-l mb-2" style="color: white">
+                            S2 PascaSarjana PENS
+                        </div>
+                    </div>
                 </div>
             </div>
             @if (Auth::check())
