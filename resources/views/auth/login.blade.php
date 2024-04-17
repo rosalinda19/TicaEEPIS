@@ -1,5 +1,5 @@
 <style>
-    .w-full{
+    .w-full {
         max-width: none !important;
         width: auto !important;
         display: flex !important;
@@ -8,44 +8,45 @@
 </style>
 <nav class="navbar bg-primary" style="height: 80px">
     <div class="container-fluid">
-      <a class="navbar-brand" href="resource/views/dashboard.blade.php">
-        <img src="../resources/images/Logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
-        <div class="font-bold text-xl mb-2" style="color: white" >Tica 
-        S2 PascaSarjana PENS</div>
-      </a>
+        <a class="navbar-brand" href="resource/views/dashboard.blade.php">
+            <img src="../resources/images/Logo.png" alt="" width="30" height="24"
+                class="d-inline-block align-text-top">
+            <div class="font-bold text-xl mb-2" style="color: white">Tica
+                S2 PascaSarjana PENS</div>
+        </a>
     </div>
-  </nav>
+</nav>
 <x-guest-layout>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
-
     <div class="flex">
-        <form method="POST" action="{{ route('login') }}" class="flex items-center justify-center" style="min-width: 25vw; min-height: 60vh;">
+        <form method="POST" action="{{ route('login') }}" class="flex items-center justify-center"
+            style="min-width: 25vw; min-height: 60vh;">
             @csrf
             <div class="card mb-3 items-center flex flex-col">
-            <!-- Email Address -->
-            <div>
-                <x-input-label for="email" :value="__('Email')" />
-                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')"
-                    required autofocus autocomplete="username" style="height: 52px !important; width: 250px !important;"/>
-                <x-input-error :messages="$errors->get('email')" class="mt-2" />
-            </div>
+                <!-- Email Address -->
+                <div>
+                    <x-input-label for="email" :value="__('Email')" />
+                    <x-text-input id="email" class="block mt-1 w-full" type="email" name="email"
+                        :value="old('email')" required autofocus autocomplete="username"
+                        style="height: 52px !important; width: 250px !important;" />
+                    <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                </div>
+                <!-- Password -->
+                <div class="mt-4">
+                    <x-input-label for="password" :value="__('Password')" />
 
-            <!-- Password -->
-            <div class="mt-4">
-                <x-input-label for="password" :value="__('Password')" />
+                    <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required
+                        autocomplete="current-password" style="height: 52px !important; width: 250px !important;" />
 
-                <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required
-                    autocomplete="current-password" style="height: 52px !important; width: 250px !important;"/>
+                    <x-input-error :messages="$errors->get('password')" class="mt-8" />
+                </div>
 
-                <x-input-error :messages="$errors->get('password')" class="mt-8" />
-            </div>
-
-            <div class="flex items-center justify-center mt-8">
-                <x-primary-button class="ms-2" style="height: 40; width: 80; ">
-                    {{ __('Masuk') }}
-                </x-primary-button>
-            </div>
+                <div class="flex items-center justify-center mt-8">
+                    <x-primary-button class="ms-2" style="height: 40; width: 80; ">
+                        {{ __('Masuk') }}
+                    </x-primary-button>
+                </div>
         </form>
     </div>
     <div class="max-w-sm " style="max-width: 25vw; min-height: 60vh; display: flex; background-color: lightgrey;">

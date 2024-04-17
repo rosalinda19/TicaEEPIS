@@ -7,5 +7,8 @@ use Illuminate\Http\Request;
 
 class JudulController extends Controller
 {
-    //
+    public function create()
+    {
+        return view('mahasiswa.judul.create');
+    }
 }
