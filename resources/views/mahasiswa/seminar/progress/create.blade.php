@@ -1,3 +1,3 @@
 <div>
-    <!-- An unexamined life is not worth living. - Socrates -->
+    @echo "halaman create progress seminar mahasiswa"
 </div>

@@ -6,16 +6,6 @@
         padding: 0px !important;
     }
 </style>
-{{-- <nav class="navbar bg-primary" style="height: 80px">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="resource/views/dashboard.blade.php">
-            <img src="../resources/images/Logo.png" alt="" width="30" height="24"
-                class="d-inline-block align-text-top">
-            <div class="font-bold text-xl mb-2" style="color: white">Tica
-                S2 PascaSarjana PENS</div>
-        </a>
-    </div>
-</nav> --}}
 <x-guest-layout>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
@@ -37,7 +27,6 @@
                     <x-input-label for="password" :value="__('Password')" />
                     <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required
                         autocomplete="current-password" style="height: 52px !important; width: 250px !important;" />
-
                     <x-input-error :messages="$errors->get('password')" class="mt-8" />
                 </div>
                 <div class="flex items-center justify-center mt-8">
@@ -47,7 +36,8 @@
                 </div>
         </form>
     </div>
-    <div class="max-w-sm " style="max-width: 25vw; min-height: 60vh; display: flex; background-color: lightgrey;">
+    <div class="max-w-sm flex items-center justify-center"
+        style="max-width: 25vw; min-height: 60vh; display: flex; background-color: lightgrey;">
         <div class="px-12 py-4" style="align-content: center;">
             <div class="font-bold text-xl mb-2">Selamat Datang di Tica</div>
             <p class="text-gray-700 text-base">

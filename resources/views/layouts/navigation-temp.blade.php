@@ -63,7 +63,7 @@
                             <x-dropdown-link :href="route('mahasiswa.publikasi')">
                                 {{ __('Publikasi') }}
                             </x-dropdown-link>
-                            <x-dropdown-link :href="route('mahasiswa.data-publikasi.index')">
+                            <x-dropdown-link :href="route('mahasiswa.data-publikasi')">
                                 {{ __('Upload Publikasi') }}
                             </x-dropdown-link>
                         </x-slot>
