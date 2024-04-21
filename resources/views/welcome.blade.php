@@ -833,7 +833,17 @@
 <body class="antialiased">
     <div
         class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
-        @if (Route::has('login'))
+        {{-- @include('layouts.navigation-temp') --}}
+        <div class="px-12 py-4" style="align-content: center;">
+            <p class="text-gray-700 text-base">
+                Program Pascasarjana Politeknik Elektronika Negeri Surabaya membuka Penerimaan Mahasiswa Baru
+                Tahun 2023 Gelombang 2, bagi Program Magister Terapan pada bidang Teknologi Rekayasa untuk
+                Program Studi S2 Terapan Teknik Elektro dan Program Studi S2 Terapan Teknik Informatika dan
+                Komputer.
+            </p>
+        </div>
+    </div>
+        {{-- @if (Route::has('login'))
             <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
                 @auth
                     <a href="{{ url('/dashboard') }}"
@@ -849,7 +859,7 @@
                     @endif
                 @endauth
             </div>
-        @endif
+        @endif --}}
 
         {{-- <div class="max-w-7xl mx-auto p-6 lg:p-8">
             <div class="flex justify-center">
