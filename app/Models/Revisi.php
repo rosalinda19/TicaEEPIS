@@ -13,8 +13,8 @@ class Revisi extends Model
 
     protected $fillable = [
         'seminar_id',
-        'file_path',
-        'description',
+        'file_revisi',
+        'catatan',
     ];
 
     public function seminar()

@@ -11,12 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('revisis', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('seminar_id')->constrained('seminars');
-            $table->char('file_revisi');
-            $table->text('catatan');
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->foreignId('program_studi_id')->constrained('program_studis')->after('email');
         });
     }
 
@@ -25,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('revisis');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('program_studi_id');
+        });
     }
 };

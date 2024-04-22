@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Mahasiswa;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Mahasiswa\StoreDataPublikasi;
+use App\Models\DataPublikasi;
 use Illuminate\Http\Request;
 
 class DataPublikasiController extends Controller
@@ -17,10 +19,17 @@ class DataPublikasiController extends Controller
         return view('mahasiswa.data-publikasi.create');
     }
 
-    public function store(Request $request)
+    public function store(StoreDataPublikasi $request)
     {
-        //
+        $validatedData = $request->validated();
+        $dataPublikasi = new DataPublikasi();
+        $dataPublikasi->fill($validatedData);
+        $dataPublikasi->mahasiswa_id = auth()->id();
+        $dataPublikasi->berkas_publikasi = $request->file('berkas_publikasi')->store('berkas-publikasi');
+        $dataPublikasi->save();
+        return redirect()->route('mahasiswa.dashboard');
     }
+
 
     public function show($id)
     {

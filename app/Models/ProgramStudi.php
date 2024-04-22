@@ -15,8 +15,8 @@ class ProgramStudi extends Model
         'nama',
     ];
 
-    public function judul()
+    public function users()
     {
-        return $this->hasMany(Judul::class, 'program_studi_id');
+        return $this->hasMany(User::class);
     }
 }

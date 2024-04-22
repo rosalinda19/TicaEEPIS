@@ -17,10 +17,10 @@ return new class extends Migration
             $table->foreignid('kategori_id')->constrained('kategoris');
             $table->string('laporan');
             $table->string('penerima_naskah');
-            $table->string('persetujuan');
+            $table->string('seminar_tesis');
             $table->string('lembar_monitoring');
-            $table->string('video_demo');
             $table->string('ppt');
+            $table->string('video_demo')->nullable();
             $table->timestamps();
         });
     }

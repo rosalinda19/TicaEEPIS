@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('juduls', function (Blueprint $table) {
             $table->id();
             $table->foreignId('mahasiswa_id')->constrained('users');
-            $table->foreignId('program_studi_id')->constrained('program_studis');
             $table->text('judul_penelitian');
             $table->string('tahun_angkatan');
             $table->string('tahun_ajaran');

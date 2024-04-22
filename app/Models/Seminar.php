@@ -16,7 +16,7 @@ class Seminar extends Model
         'kategori_id',
         'laporan',
         'penerima_naskah',
-        'persetujuan',
+        'seminar_tesis',
         'lembar_monitoring',
         'video_demo',
         'ppt',

@@ -13,12 +13,11 @@ class Judul extends Model
 
     protected $fillable = [
         'mahasiswa_id',
-        'program_studi_id',
         'judul_penelitian',
         'tahun_angkatan',
         'tahun_ajaran',
         'semester',
-        'tanggal_upload',
+        'tanggal',
         'dosen_pembimbing1',
         'dosen_pembimbing2',
         'dosen_pembimbing3',
@@ -27,10 +26,5 @@ class Judul extends Model
     public function mahasiswa()
     {
         return $this->belongsTo(User::class, 'mahasiswa_id');
-    }
-
-    public function programStudi()
-    {
-        return $this->belongsTo(ProgramStudi::class, 'program_studi_id');
     }
 }

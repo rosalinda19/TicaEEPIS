@@ -43,19 +43,19 @@ Route::prefix('mahasiswa')->name('mahasiswa.')->group(function () {
     })->name('dashboard');
     Route::prefix('/pengajuan-judul')->name('pengajuan-judul')->group(function () {
         Route::get('/', [JudulController::class, 'create']);
-        Route::post('/', [JudulController::class, 'store'])->name('.store');
+        Route::post('/', [JudulController::class, 'store']);
     });
     Route::prefix('/seminar-proposal')->name('seminar-proposal')->group(function () {
         Route::get('/', [SeminarController::class, 'createProposal']);
-        Route::post('/', [SeminarController::class, 'store']);
+        Route::post('/', [SeminarController::class, 'storeProposal']);
     });
     Route::prefix('/progress-tesis')->name('progress-tesis')->group(function () {
         Route::get('/', [SeminarController::class, 'createProgress']);
-        Route::post('/', [SeminarController::class, 'store']);
+        Route::post('/', [SeminarController::class, 'storeProgress']);
     });
     Route::prefix('/final-tesis')->name('final-tesis')->group(function () {
         Route::get('/', [SeminarController::class, 'createFinal']);
-        Route::post('/', [SeminarController::class, 'store']);
+        Route::post('/', [SeminarController::class, 'storeFinal']);
     });
     Route::prefix('/revisi')->name('revisi')->group(function () {
         Route::get('/', [RevisiController::class, 'create']);

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Mahasiswa;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreJudulRequest;
+use App\Http\Requests\Mahasiswa\StorePengajuanJudul;
 use App\Models\Judul;
 
 class JudulController extends Controller
@@ -12,22 +12,14 @@ class JudulController extends Controller
     {
         return view('mahasiswa.judul.create');
     }
-    public function store(StoreJudulRequest $request)
+
+    public function store(StorePengajuanJudul $request)
     {
-        $request->validate([
-            'judul' => 'required',
-            'deskripsi' => 'required',
-            'dosen_id' => 'required',
-        ]);
-
+        $validatedData = $request->validated();
         $judul = new Judul;
-        $judul->judul = $request->judul;
-        $judul->deskripsi = $request->deskripsi;
-        $judul->dosen_id = $request->dosen_id;
-        $judul->mahasiswa_id = auth()->user()->mahasiswa->id;
-        $judul->status = 'pending';
+        $judul->fill($validatedData);
+        $judul->mahasiswa_id = auth()->id();
         $judul->save();
-
-        return redirect()->route('mahasiswa.judul.index');
+        return redirect()->route('mahasiswa.dashboard');
     }
 }
