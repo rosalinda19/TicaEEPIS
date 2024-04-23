@@ -6,8 +6,7 @@
                     <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
                         <h2 class="font-semibold text-xl text-black">Progress Tesis</h2>
                         <div class="lg:col-span-3">
-                            <form method="POST" action="{{ route('mahasiswa.progress-tesis') }}"
-                                enctype="multipart/form-data">
+                            <form method="POST" action="{{ route('mahasiswa.revisi') }}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
                                     <div class="md:col-span-5">

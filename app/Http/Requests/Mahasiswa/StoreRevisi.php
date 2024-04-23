@@ -22,8 +22,7 @@ class StoreRevisi extends FormRequest
     public function rules(): array
     {
         return [
-            'kategori' => 'required',
-            'berkas_revisi' => 'required|mimes:pdf|max:2048',
+            'file_revisi' => 'required|mimes:pdf|max:2048',
             'catatan' => 'required|string|max:255',
         ];
     }

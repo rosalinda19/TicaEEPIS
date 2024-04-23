@@ -68,6 +68,7 @@ Route::middleware('auth')->group(function () {
             Route::get('/', [DataPublikasiController::class, 'create']);
             Route::post('/', [DataPublikasiController::class, 'store']);
         });
+        Route::get('/test', [RevisiController::class, 'test']);
     });
 
     Route::prefix('kaprodi')->name('kaprodi.')->group(function () {
