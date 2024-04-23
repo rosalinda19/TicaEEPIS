@@ -35,47 +35,49 @@ Route::middleware('auth')->group(function () {
             return redirect()->route('kaprodi.dashboard');
         }
     })->name('dashboard');
+
+    Route::prefix('mahasiswa')->name('mahasiswa.')->group(function () {
+        Route::get('/', function () {
+            return view('mahasiswa/dashboard');
+        })->name('dashboard');
+        Route::prefix('/pengajuan-judul')->name('pengajuan-judul')->group(function () {
+            Route::get('/', [JudulController::class, 'create']);
+            Route::post('/', [JudulController::class, 'store']);
+        });
+        Route::prefix('/seminar-proposal')->name('seminar-proposal')->group(function () {
+            Route::get('/', [SeminarController::class, 'createProposal']);
+            Route::post('/', [SeminarController::class, 'storeProposal']);
+        });
+        Route::prefix('/progress-tesis')->name('progress-tesis')->group(function () {
+            Route::get('/', [SeminarController::class, 'createProgress']);
+            Route::post('/', [SeminarController::class, 'storeProgress']);
+        });
+        Route::prefix('/final-tesis')->name('final-tesis')->group(function () {
+            Route::get('/', [SeminarController::class, 'createFinal']);
+            Route::post('/', [SeminarController::class, 'storeFinal']);
+        });
+        Route::prefix('/revisi')->name('revisi')->group(function () {
+            Route::get('/', [RevisiController::class, 'create']);
+            Route::post('/', [RevisiController::class, 'store']);
+        });
+        Route::prefix('/publikasi')->name('publikasi')->group(function () {
+            Route::get('/', [PublikasiController::class, 'create']);
+            Route::post('/', [PublikasiController::class, 'store']);
+        });
+        Route::prefix('/data-publikasi')->name('data-publikasi')->group(function () {
+            Route::get('/', [DataPublikasiController::class, 'create']);
+            Route::post('/', [DataPublikasiController::class, 'store']);
+        });
+    });
+
+    Route::prefix('kaprodi')->name('kaprodi.')->group(function () {
+        Route::get('/', function () {
+            return view('kaprodi/dashboard');
+        })->name('dashboard');
+    });
 });
 
-Route::prefix('mahasiswa')->name('mahasiswa.')->group(function () {
-    Route::get('/', function () {
-        return view('mahasiswa/dashboard');
-    })->name('dashboard');
-    Route::prefix('/pengajuan-judul')->name('pengajuan-judul')->group(function () {
-        Route::get('/', [JudulController::class, 'create']);
-        Route::post('/', [JudulController::class, 'store']);
-    });
-    Route::prefix('/seminar-proposal')->name('seminar-proposal')->group(function () {
-        Route::get('/', [SeminarController::class, 'createProposal']);
-        Route::post('/', [SeminarController::class, 'storeProposal']);
-    });
-    Route::prefix('/progress-tesis')->name('progress-tesis')->group(function () {
-        Route::get('/', [SeminarController::class, 'createProgress']);
-        Route::post('/', [SeminarController::class, 'storeProgress']);
-    });
-    Route::prefix('/final-tesis')->name('final-tesis')->group(function () {
-        Route::get('/', [SeminarController::class, 'createFinal']);
-        Route::post('/', [SeminarController::class, 'storeFinal']);
-    });
-    Route::prefix('/revisi')->name('revisi')->group(function () {
-        Route::get('/', [RevisiController::class, 'create']);
-        Route::post('/', [RevisiController::class, 'store']);
-    });
-    Route::prefix('/publikasi')->name('publikasi')->group(function () {
-        Route::get('/', [PublikasiController::class, 'create']);
-        Route::post('/', [PublikasiController::class, 'store']);
-    });
-    Route::prefix('/data-publikasi')->name('data-publikasi')->group(function () {
-        Route::get('/', [DataPublikasiController::class, 'create']);
-        Route::post('/', [DataPublikasiController::class, 'store']);
-    });
-});
 
-Route::prefix('kaprodi')->name('kaprodi.')->group(function () {
-    Route::get('/', function () {
-        return view('kaprodi/dashboard');
-    })->name('dashboard');
-});
 
 Route::get('/bukti', function () {
     return view('Front/Bukti-publikasi');
