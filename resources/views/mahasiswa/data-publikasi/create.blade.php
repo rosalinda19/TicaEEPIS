@@ -4,7 +4,7 @@
             <div>
                 <div class="bg-third rounded shadow-lg p-4 px-4 md:p-8 mb-6">
                     <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
-                        <h2 class="font-semibold text-xl text-black">Pengajuan Judul</h2>
+                        <h2 class="font-semibold text-xl text-black">Publikasi</h2>
                         <div class="md:col-span-5 text-left">
                             <div class="inline-flex items-end">
                                 <button class="bg-primary hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
