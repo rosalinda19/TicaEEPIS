@@ -4,7 +4,7 @@
             <div>
                 <div class="bg-third rounded shadow-lg p-4 px-4 md:p-8 mb-6">
                     <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
-                        <h2 class="font-semibold text-xl text-black">Progress Tesis</h2>
+                        <h2 class="font-semibold text-xl text-black">Revisi Tesis</h2>
                         <div class="lg:col-span-3">
                             <form method="POST" action="{{ route('mahasiswa.revisi') }}" enctype="multipart/form-data">
                                 @csrf

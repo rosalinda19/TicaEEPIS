@@ -42,6 +42,7 @@ Route::middleware('auth')->group(function () {
         })->name('dashboard');
         Route::prefix('/pengajuan-judul')->name('pengajuan-judul')->group(function () {
             Route::get('/', [JudulController::class, 'create']);
+            // Route::get('/judul', [JudulController::class, 'store']);
             Route::post('/', [JudulController::class, 'store']);
         });
         Route::prefix('/seminar-proposal')->name('seminar-proposal')->group(function () {

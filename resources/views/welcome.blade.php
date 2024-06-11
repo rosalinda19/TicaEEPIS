@@ -18,13 +18,15 @@
     @include('layouts.navigation-temp')
     <div
         class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
-        <div class="px-12 py-4" style="align-content: center;">
+        <div class="px-6 py-4" style="align-content: center;">
             <p class="text-gray-700 text-base">
-                Program Pascasarjana Politeknik Elektronika Negeri Surabaya membuka Penerimaan Mahasiswa Baru
-                Tahun 2023 Gelombang 2, bagi Program Magister Terapan pada bidang Teknologi Rekayasa untuk
-                Program Studi S2 Terapan Teknik Elektro dan Program Studi S2 Terapan Teknik Informatika dan
-                Komputer.
+                Awal sejarah PENS dimulai pada tahun 1984. Japan International Cooperation Agency (JICA), 
+                badan kerja sama internasional yang didirikan pemerintah Jepang tahun 1974 guna membantu pembangunan negara-negara berkembang, 
+                berencana untuk membangun pendidikan politeknik di Indonesia dan memberikan hibah untuk pengembangan politeknik.
+                Bantuan hibah dan kerja sama dari JICA ini sempat ditawarkan ke beberapa kampus, 
+                namun mereka tidak segera menerima karena alasan tidak memiliki lahan yang cukup. 
             </p>
+            <div></div>
         </div>
     </div>
     {{-- @if (Route::has('login'))

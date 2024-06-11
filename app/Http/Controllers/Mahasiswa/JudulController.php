@@ -11,8 +11,9 @@ class JudulController extends Controller
     public function create()
     {
         return view('mahasiswa.judul.create');
+        
     }
-
+    
     public function store(StorePengajuanJudul $request)
     {
         $validatedData = $request->validated();
@@ -21,5 +22,6 @@ class JudulController extends Controller
         $judul->mahasiswa_id = auth()->id();
         $judul->save();
         return redirect()->route('mahasiswa.dashboard');
+        // dd($judul);
     }
 }
