@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\Mahasiswa\DashboradController;
 use App\Http\Controllers\Mahasiswa\DataPublikasiController;
 use App\Http\Controllers\Mahasiswa\JudulController;
 use App\Http\Controllers\Mahasiswa\PublikasiController;
+// use App\Http\Controllers\Mahasiswa\PublikasiController;
 use App\Http\Controllers\Mahasiswa\RevisiController;
 use App\Http\Controllers\Mahasiswa\SeminarController;
 use App\Http\Controllers\ProfileController;
@@ -37,9 +39,7 @@ Route::middleware('auth')->group(function () {
     })->name('dashboard');
 
     Route::prefix('mahasiswa')->name('mahasiswa.')->group(function () {
-        Route::get('/', function () {
-            return view('mahasiswa/dashboard');
-        })->name('dashboard');
+        Route::get('/',[DashboradController::class, 'index'])->name('dashboard');
         Route::prefix('/pengajuan-judul')->name('pengajuan-judul')->group(function () {
             Route::get('/', [JudulController::class, 'create']);
             // Route::get('/judul', [JudulController::class, 'store']);

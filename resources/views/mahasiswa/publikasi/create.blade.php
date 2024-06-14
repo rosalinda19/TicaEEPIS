@@ -78,7 +78,7 @@
         @if (session('success'))
         <div style="color: green;">{{ session('success') }}</div>
         @endif
-        <form action="{{ route('publication.store') }}" method="post">
+        <form action="/mahasiswa/publikasi" method="post">
             @csrf
             <div class="form-group">
                 <label for="nama_mahasiswa">Nama Mahasiswa</label>
