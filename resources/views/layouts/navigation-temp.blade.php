@@ -58,9 +58,9 @@
                             <x-dropdown-link :href="route('mahasiswa.revisi')">
                                 {{ __('Revisi') }}
                             </x-dropdown-link>
-                            {{-- <x-dropdown-link :href="route('mahasiswa.publikasi')">
+                            <x-dropdown-link :href="route('mahasiswa.publikasi')">
                                 {{ __('Publikasi') }}
-                            </x-dropdown-link> --}}
+                            </x-dropdown-link>
                             <x-dropdown-link :href="route('mahasiswa.data-publikasi')">
                                 {{ __('Upload Publikasi') }}
                             </x-dropdown-link>
