@@ -23,18 +23,26 @@ class DashboradController extends Controller
             $proposal = Seminar::where('judul_id', $judul->id)->where('kategori_id', 2)->first();
             if (!$proposal) {
                 $proposal = "";
+            } else {
+                $proposal->judul_penelitian = Judul::where('id', $proposal->judul_id)->first();
             }
             $tesis_1 = Seminar::where('judul_id', $judul->id)->where('kategori_id', 2)->first();
             if (!$tesis_1) {
                 $tesis_1 = "";
+            } else {
+                $tesis_1->judul_penelitian = Judul::where('id', $tesis_1->judul_id)->first();
             }
             $tesis_2 = Seminar::where('judul_id', $judul->id)->where('kategori_id', 3)->first();
             if (!$tesis_2) {
                 $tesis_2 = "";
+            } else {
+                $tesis_2->judul_penelitian = Judul::where('id', $tesis_2->judul_id)->first();
             }
             $final = Seminar::where('judul_id', $judul->id)->where('kategori_id', 4)->first();
             if (!$final) {
                 $final = "";
+            } else {
+                $final->judul_penelitian = Judul::where('id', $final->judul_id)->first();
             }
         }
         return view('mahasiswa/dashboard', compact('judul', 'proposal', 'tesis_1', 'tesis_2', 'final'));
