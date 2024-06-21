@@ -20,6 +20,16 @@ class AuthenticatedSessionController extends Controller
         return view('auth.login');
     }
 
+    public function createKaprodi(): View
+    {
+        return view('auth.login-kaprodi');
+    }
+
+    public function createMahasiswa(): View
+    {
+        return view('auth.login-mahasiswa');
+    }
+
     /**
      * Handle an incoming authentication request.
      */

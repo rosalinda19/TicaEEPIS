@@ -28,5 +28,13 @@ class UserSeeder extends Seeder
             'password' => bcrypt('dsn'),
         ]);
         $dosen->assignRole('kaprodi');
+        $mahasiswa = User::create([
+            'nrp' => 3120600001,
+            'name' => 'mhs test 2',
+            'email' => 'mhs2@tica.id',
+            'program_studi_id' => 1,
+            'password' => bcrypt('mhs'),
+        ]);
+        $mahasiswa->assignRole('mahasiswa');
     }
 }
