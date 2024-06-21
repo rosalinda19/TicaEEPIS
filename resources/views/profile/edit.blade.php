@@ -16,19 +16,23 @@
         style="max-width: 25vw; min-height: 60vh; display: flex; background-color: lightgrey;">
         <div class="px-12 py-4" style="align-content: center;">
             <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
+               <div class="md:col-span-5">
+                    <label for="">Nama</label>
+                    <input type="text" name="" id=""
+                    value="{{ $user->name }}" disabled
+                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
+                </div>
                 <div class="md:col-span-5">
                     <label for="">NRP</label>
                     <input type="text" name="" id=""
+                    value="{{ $user->nrp }}" disabled
                         class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
                 </div>
-                <div class="md:col-span-5">
-                    <label for="">Angkatan</label>
-                    <input type="text" name="" id=""
-                        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
-                </div>
+                
                 <div class="md:col-span-5">
                     <label for="">Program Study</label>
                     <input type="text" name="" id=""
+                    value="{{ $prodi->nama }}" disabled
                         class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
                 </div>
                 <div class="md:col-span-5 text-center">
