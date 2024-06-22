@@ -15,7 +15,7 @@
                     <div class="p-6 text-gray-900 dark:text-gray-100">
                         <div class="container">
                             <div class="border-b border-blue-200 mb-4 pb-2">
-                                <h2 class="font-bold text-xl mb-2">Progress Tesis 1</h2>
+                                <h2 class="font-bold text-xl mb-2">Final Tesis</h2>
                             </div>
                             <div class="pl-6 pt-3 text-white font-medium">
                                 <div class="grid grid-cols-3 gap-2 mb-2">
@@ -31,7 +31,7 @@
                                     <span class="col-span-2">: {{ $final->judul_penelitian }}</span>
                                 </div>
                                 <div class="grid grid-cols-3 gap-2 mb-2">
-                                    <span class="font-semibold col-span-1">File Proposal Tesis</span>
+                                    <span class="font-semibold col-span-1">File Final Tesis</span>
                                     <span class="col-span-2">: {{ $final->laporan }}</span>
                                 </div>
                             </div>
@@ -50,7 +50,7 @@
                     <div class="p-6 text-gray-900 dark:text-gray-100">
                         <div class="container">
                             <div class="border-b border-blue-200 mb-4 pb-2">
-                                <h2 class="font-bold text-xl mb-2">Progress Tesis 1</h2>
+                                <h2 class="font-bold text-xl mb-2">Progress Tesis 2</h2>
                             </div>
                             <div class="pl-6 pt-3 text-white font-medium">
                                 <div class="grid grid-cols-3 gap-2 mb-2">
@@ -66,7 +66,7 @@
                                     <span class="col-span-2">: {{ $tesis_2->judul_penelitian }}</span>
                                 </div>
                                 <div class="grid grid-cols-3 gap-2 mb-2">
-                                    <span class="font-semibold col-span-1">File Proposal Tesis</span>
+                                    <span class="font-semibold col-span-1">File Progres Tesis 2</span>
                                     <span class="col-span-2">: {{ $tesis_2->laporan }}</span>
                                 </div>
                             </div>
@@ -101,7 +101,7 @@
                                     <span class="col-span-2">: {{ $tesis_1->judul_penelitian }}</span>
                                 </div>
                                 <div class="grid grid-cols-3 gap-2 mb-2">
-                                    <span class="font-semibold col-span-1">File Proposal Tesis</span>
+                                    <span class="font-semibold col-span-1">File Progres Tesis 1</span>
                                     <span class="col-span-2">: {{ $tesis_1->laporan }}</span>
                                 </div>
                             </div>
