@@ -25,7 +25,7 @@ class DataPublikasiController extends Controller
         $dataPublikasi = new DataPublikasi();
         $dataPublikasi->fill($validatedData);
         $dataPublikasi->mahasiswa_id = auth()->id();
-        $dataPublikasi->berkas_publikasi = $request->file('berkas_publikasi')->store('berkas-publikasi');
+        $dataPublikasi->berkas_publikasi = $request->file('berkas_publikasi')->store('berkas-publikasi', 'public');
         $dataPublikasi->save();
         return redirect()->route('mahasiswa.dashboard');
     }

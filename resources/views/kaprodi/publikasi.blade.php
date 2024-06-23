@@ -18,25 +18,67 @@
                             NRP Mahasiswa
                         </th>
                         <th scope="col" class="px-6 py-3">
+                            Nama Mahasiswa
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Program Studi
+                        </th>
+                        <th scope="col" class="px-6 py-3">
                             Judul
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Laporan Proposal
+                            Pembimbing 1
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Penerima Naskah
+                            Pembimbing 2
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Persetujuan Maju Sidang
+                            Pembimbing 3
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Lembar Monitoring
+                            Judul Publikasi
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            PPT
+                            Status Publikasi
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Video
+                            Jenis Jurnal
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Volume dan Nomer
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Halaman Publikasi
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Tahun Publikasi
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Link Dokumen
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Judul Seminar
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Urutan Penulis Seminar
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Status Seminar
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Jenis Seminar
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Nama Seminar
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Penyelenggara Seminar
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Tahun Seminar
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Link Dokumen Seminar
                         </th>
                     </tr>
                 </thead>

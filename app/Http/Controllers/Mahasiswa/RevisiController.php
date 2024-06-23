@@ -25,7 +25,7 @@ class RevisiController extends Controller
         $judul_id = Judul::where('mahasiswa_id', auth()->id())->first()->id;
         $kategori_id = Kategori::where('nama', $request->kategori)->first()->id;
         $revisi->seminar_id = Seminar::where('judul_id', $judul_id)->where('kategori_id', $kategori_id)->first()->id;
-        $revisi->file_revisi = $request->file('file_revisi')->store('file-revisi');
+        $revisi->file_revisi = $request->file('file_revisi')->store('file-revisi', 'public');
         $revisi->save();
         return redirect()->route('mahasiswa.dashboard');
     }

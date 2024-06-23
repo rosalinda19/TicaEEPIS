@@ -3,13 +3,8 @@
         <div class="flex justify-between items-center mb-4">
             <h1 class="text-2xl font-bold text-gray-700">Pengajuan Judul</h1>
             <div class="flex items-center space-x-4">
-                <form action="{{ route('kaprodi.judul.search') }}" method="post" class="flex items-center space-x-4">
-                    @csrf
-                    <input type="text" id="query" name="query" placeholder="Search"
-                        class="border border-gray-300 rounded p-2">
-                    <button type="submit" id="searchButton"
-                        class="bg-primary text-white px-4 py-2 rounded shadow hover:bg-blue-600">Search</button>
-                </form>
+                <button class="bg-primary text-white px-4 py-2 rounded shadow hover:bg-blue-600">Count :
+                    {!! $count !!}</button>
             </div>
         </div>
         <div class="relative overflow-x-auto">
@@ -54,7 +49,7 @@
                         </th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="tableBody">
                     @foreach ($judul as $item)
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                             <th scope="row"

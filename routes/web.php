@@ -82,6 +82,8 @@ Route::middleware('auth')->group(function () {
         Route::get('/final-tesis', [DashboardController::class, 'finalTesis'])->name('final');
         Route::get('/revisi', [DashboardController::class, 'revisi'])->name('revisi');
         Route::get('/publikasi', [DashboardController::class, 'publikasi'])->name('publikasi');
+        Route::post('/pengajuan-judul/search', [DashboardController::class, 'judulSearch'])->name('judul.search');
+        // Route::get('/search', [DashboardController::class, 'search'])->name('search');
     });
 });
 

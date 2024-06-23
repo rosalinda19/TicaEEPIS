@@ -92,6 +92,52 @@ class DashboardController extends Controller
     public function publikasi()
     {
         $publikasi = Publikasi::all();
+        foreach ($publikasi as $i) {
+            $mahasiswa = User::where('id', $i->mahasiswa_id)->first();
+            $judul = Judul::where('mahasiswa_id', $i->mahasiswa_id)->first();
+            $i->nrp = $mahasiswa->nrp;
+            $i->nama = $mahasiswa->name;
+            $i->prodi = ProgramStudi::where('id', $mahasiswa->program_studi_id)->first()->nama;
+            $i->judul_tesis = $judul->judul_penelitian;
+            $i->dosen_pembimbing1 = $judul->dosen_pembimbing1;
+            $i->dosen_pembimbing2 = $judul->dosen_pembimbing2;
+            $i->dosen_pembimbing3 = $judul->dosen_pembimbing3;
+        }
         return view('kaprodi.publikasi', ['publikasi' => $publikasi]);
+    }
+
+    public function judulSearch(Request $request)
+    {
+        $query = $request->input('query');
+        $judul = Judul::where('judul_penelitian', 'LIKE', '%' . $query . '%')
+            ->orWhere('dosen_pembimbing1', 'LIKE', '%' . $query . '%')
+            ->orWhere('dosen_pembimbing2', 'LIKE', '%' . $query . '%')
+            ->orWhere('dosen_pembimbing3', 'LIKE', '%' . $query . '%')
+            ->get();
+
+        foreach ($judul as $i) {
+            $mahasiswa = User::where('id', $i->mahasiswa_id)->first();
+            $i->nrp = $mahasiswa->nrp;
+            $i->nama = $mahasiswa->name;
+            $i->tanggal_upload = Carbon::parse($i->created_at)->format('d-m-Y');
+            $i->prodi = ProgramStudi::where('id', $mahasiswa->program_studi_id)->first()->nama;
+        }
+        $count = count($judul);
+        return view('kaprodi.judul-search', ['judul' => $judul, 'count' => $count]);
+    }
+
+    public function search(Request $request)
+    {
+        $query = $request->input('query'); // Ambil kata kunci pencarian dari input
+
+        // Query pencarian berdasarkan kolom yang relevan pada model Judul
+        $results = Judul::where('nama', 'LIKE', '%' . $query . '%')
+            ->orWhere('nrp', 'LIKE', '%' . $query . '%')
+            ->orWhere('prodi', 'LIKE', '%' . $query . '%')
+            ->orWhere('judul_penelitian', 'LIKE', '%' . $query . '%')
+            ->get();
+
+        // Kirim hasil pencarian ke view dalam bentuk HTML untuk diperbarui dengan jQuery
+        return view('search.results', compact('results'));
     }
 }
