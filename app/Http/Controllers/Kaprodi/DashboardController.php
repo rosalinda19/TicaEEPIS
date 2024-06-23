@@ -109,11 +109,20 @@ class DashboardController extends Controller
     public function judulSearch(Request $request)
     {
         $query = $request->input('query');
-        $judul = Judul::where('judul_penelitian', 'LIKE', '%' . $query . '%')
+
+        $mahasiswa = User::where('nrp', 'LIKE', '%' . $query . '%')
+            ->orWhere('name', 'LIKE', '%' . $query . '%')
+            ->first();
+
+        $judulQuery = Judul::where('judul_penelitian', 'LIKE', '%' . $query . '%')
             ->orWhere('dosen_pembimbing1', 'LIKE', '%' . $query . '%')
             ->orWhere('dosen_pembimbing2', 'LIKE', '%' . $query . '%')
-            ->orWhere('dosen_pembimbing3', 'LIKE', '%' . $query . '%')
-            ->get();
+            ->orWhere('dosen_pembimbing3', 'LIKE', '%' . $query . '%');
+
+        if ($mahasiswa) {
+            $judulQuery->orWhere('mahasiswa_id', $mahasiswa->id);
+        }
+        $judul = $judulQuery->get();
 
         foreach ($judul as $i) {
             $mahasiswa = User::where('id', $i->mahasiswa_id)->first();
