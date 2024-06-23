@@ -25,34 +25,25 @@
                             NRP Mahasiswa
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Nama Mahasiswa
+                            Judul
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Program Studi
+                            Laporan Proposal
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Tahun Angkatan
+                            Penerima Naskah
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Tahun Ajaran
+                            Persetujuan Maju Sidang
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Tanggal Upload
+                            Lembar Monitoring
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Semester
+                            PPT
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Judul Tesis
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Dosen Pembimbing 1
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Dosen Pembimbing 2
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Dosen Pembimbing 3
+                            Video
                         </th>
                     </tr>
                 </thead>
@@ -66,35 +57,14 @@
                             3120600002
                         </td>
                         <td class="px-6 py-4">
-                            Krisna Wahyu Setyawan
-                        </td>
-                        <td class="px-6 py-4">
-                            Teknik Informatika
-                        </td>
-                        <td class="px-6 py-4">
-                            2017
-                        </td>
-                        <td class="px-6 py-4">
-                            2021/2022
-                        </td>
-                        <td class="px-6 py-4">
-                            2021-08-12
-                        </td>
-                        <td class="px-6 py-4">
-                            2
-                        </td>
-                        <td class="px-6 py-4">
                             Klasifikasi Neural Network Untuk Meperkirakan Tingkat Gagal Panen Tanaman Jagung
                         </td>
-                        <td class="px-6 py-4">
-                            Dr.Setiawardhana, S.T.,M.T
-                        </td>
-                        <td class="px-6 py-4">
-                            Dr.Arna Fariza, S.Kom, M.Kom
-                        </td>
-                        <td class="px-6 py-4">
-                            Dian Septiani Santoso M. Kom.
-                        </td>
+                        <td class="border p-2 text-center icon-cell"><i class="fa fa-file"></i></td>
+                        <td class="border p-2 text-center icon-cell"><i class="fa fa-file"></i></td>
+                        <td class="border p-2 text-center icon-cell"><i class="fa fa-file"></i></td>
+                        <td class="border p-2 text-center icon-cell"><i class="fa fa-file"></i></td>
+                        <td class="border p-2 text-center icon-cell"><i class="fa fa-file"></i></td>
+                        <td class="border p-2 text-center icon-cell"><i class="fa fa-file"></i></td>
                     </tr>
                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                         <th scope="row"
@@ -105,35 +75,33 @@
                             3120600006
                         </td>
                         <td class="px-6 py-4">
-                            Rosalinda Dwi Vicesa
-                        </td>
-                        <td class="px-6 py-4">
-                            Teknik Informatika
-                        </td>
-                        <td class="px-6 py-4">
-                            2017
-                        </td>
-                        <td class="px-6 py-4">
-                            2021/2022
-                        </td>
-                        <td class="px-6 py-4">
-                            2021-08-12
-                        </td>
-                        <td class="px-6 py-4">
-                            2
-                        </td>
-                        <td class="px-6 py-4">
                             Antisipasi Penyakit Osteoporosis dengan Analisan Hasil Rontgen menggunakan Metode CNN
                         </td>
+                        <td class="border p-2 text-center icon-cell"><i class="fa fa-file"></i></td>
+                        <td class="border p-2 text-center icon-cell"><i class="fa fa-file"></i></td>
+                        <td class="border p-2 text-center icon-cell"><i class="fa fa-file"></i></td>
+                        <td class="border p-2 text-center icon-cell"><i class="fa fa-file"></i></td>
+                        <td class="border p-2 text-center icon-cell"><i class="fa fa-file"></i></td>
+                        <td class="border p-2 text-center icon-cell"><i class="fa fa-file"></i></td>
+                    </tr>
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row"
+                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            3
+                        </th>
                         <td class="px-6 py-4">
-                            Prof Iwan Syarif, S.Kom., M.Kom., M.Sc., Ph.D.
+                            3120600017
                         </td>
                         <td class="px-6 py-4">
-                            Dr.Arna Fariza, S.Kom, M.Kom
+                            Analisa Metode UCD (User Centered Design) dengan Design Thinking menggunakan Sistem
+                            Pengambil keputusan
                         </td>
-                        <td class="px-6 py-4">
-                            Dian Septiani Santoso M. Kom.
-                        </td>
+                        <td class="border p-2 text-center icon-cell"><i class="fa fa-file"></i></td>
+                        <td class="border p-2 text-center icon-cell"><i class="fa fa-file"></i></td>
+                        <td class="border p-2 text-center icon-cell"><i class="fa fa-file"></i></td>
+                        <td class="border p-2 text-center icon-cell"><i class="fa fa-file"></i></td>
+                        <td class="border p-2 text-center icon-cell"><i class="fa fa-file"></i></td>
+                        <td class="border p-2 text-center icon-cell"><i class="fa fa-file"></i></td>
                     </tr>
                 </tbody>
             </table>
