@@ -46,26 +46,23 @@
                             </x-slot>
 
                             <x-slot name="content">
-                                <x-dropdown-link :href="route('mahasiswa.pengajuan-judul')">
+                                <x-dropdown-link :href="route('kaprodi.pengajuan-judul')">
                                     {{ __('Pengajuan Judul') }}
                                 </x-dropdown-link>
-                                <x-dropdown-link :href="route('mahasiswa.seminar-proposal')">
+                                <x-dropdown-link>
                                     {{ __('Seminar Proposal') }}
                                 </x-dropdown-link>
-                                <x-dropdown-link :href="route('mahasiswa.progress-tesis')">
+                                <x-dropdown-link>
                                     {{ __('Progress Tesis') }}
                                 </x-dropdown-link>
-                                <x-dropdown-link :href="route('mahasiswa.final-tesis')">
+                                <x-dropdown-link>
                                     {{ __('Final Tesis') }}
                                 </x-dropdown-link>
-                                <x-dropdown-link :href="route('mahasiswa.revisi')">
+                                <x-dropdown-link>
                                     {{ __('Revisi') }}
                                 </x-dropdown-link>
-                                <x-dropdown-link :href="route('mahasiswa.publikasi')">
+                                <x-dropdown-link>
                                     {{ __('Publikasi') }}
-                                </x-dropdown-link>
-                                <x-dropdown-link :href="route('mahasiswa.data-publikasi')">
-                                    {{ __('Upload Publikasi') }}
                                 </x-dropdown-link>
                             </x-slot>
                         </x-dropdown>
