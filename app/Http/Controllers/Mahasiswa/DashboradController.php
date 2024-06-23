@@ -42,7 +42,6 @@ class DashboradController extends Controller
             if (!$final) {
                 $final = "";
             } else {
-
                 $final->judul_penelitian = $judul->judul_penelitian;
             }
         }

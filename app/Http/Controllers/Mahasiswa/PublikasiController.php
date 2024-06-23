@@ -3,9 +3,8 @@
 namespace App\Http\Controllers\Mahasiswa;
 
 use App\Http\Controllers\Controller;
-
-// Route::get('/publikasi/create', [PublikasiController::class, 'create']);
-// Route::post('/publikasi/store', [PublikasiController::class, 'store'])->name('publikasi.store');
+use App\Http\Requests\Mahasiswa\StorePublikasi;
+use App\Models\Publikasi;
 
 class PublikasiController extends Controller
 {
@@ -14,9 +13,11 @@ class PublikasiController extends Controller
         return view('mahasiswa.publikasi.create');
     }
 
-    public function store()
+    public function store(StorePublikasi $request)
     {
-        echo request('nrp');
-        // Store the data
+        $validated = $request->validated();
+        $validated['mahasiswa_id'] = auth()->user()->id;
+        Publikasi::create($validated);
+        return redirect()->route('mahasiswa.dashboard');
     }
 }
