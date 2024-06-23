@@ -24,7 +24,7 @@ class Publikasi extends Model
         'link_dokumen',
         'judul_seminar',
         'urutan_penulis_seminar',
-        'status',
+        'status_seminar',
         'jenis_seminar',
         'nama_seminar',
         'penyelenggara',

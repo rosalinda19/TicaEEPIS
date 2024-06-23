@@ -6,47 +6,9 @@
                     <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
                         <h2 class="font-semibold text-xl text-black">Pengajuan Judul</h2>
                         <div class="lg:col-span-3">
-                            <form method="POST" action="{{ route('mahasiswa.pengajuan-judul') }}"
-                                enctype="multipart/form-data">
+                            <form method="POST" action="{{ route('mahasiswa.publikasi') }}" enctype="multipart/form-data">
                                 @csrf
-                                <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
-                                    <div class="md:col-span-5">
-                                        <label for="nama_mahasiswa">Nama Mahasiswa</label>
-                                        <input type="text" name="nama_mahasiswa" id="nama_mahasiswa"
-                                            class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
-                                    </div>
-                                    <div class="md:col-span-5">
-                                        <label for="NRP">NRP</label>
-                                        <input type="text" name="NRP" id="NRP"
-                                            class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
-                                    </div>
-                                    <div class="md:col-span-5">
-                                        <label for="Program_Study">Program Studi</label>
-                                        <input type="text" name="Program_Study" id="Program_Study"
-                                            class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
-                                    </div>
-                                    <div class="md:col-span-5">
-                                        <label for="judul_tesis">Judul Tesis</label>
-                                        <input type="text" name="judul_tesis" id="judul_tesis"
-                                            class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
-                                    </div>
-
-                                    <div class="md:col-span-5">
-                                        <label for="dosen_pembimbing1">Dosen Pembimbing</label>
-                                        <input type="text" name="dosen_pembimbing1" id="dosen_pembimbing1"
-                                            class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""
-                                            placeholder="Dosen Pembimbing 1" />
-                                    </div>
-                                    <div class="md:col-span-5">
-                                        <input type="text" name="dosen_pembimbing2" id="dosen_pembimbing2"
-                                            class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""
-                                            placeholder="Dosen Pembimbing 2" />
-                                    </div>
-                                    <div class="md:col-span-5">
-                                        <input type="text" name="dosen_pembimbing3" id="dosen_pembimbing3"
-                                            class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value=""
-                                            placeholder="Dosen Pembimbing 3" />
-                                    </div>
+                                <div class="grid gap-4 gap-y-2 text-sm grid-cols- md:grid-cols-3">
                                     <h3 class="font-semibold text-xl text-black">Data Publikasi Jurnal</h3>
                                     <div class="md:col-span-5">
                                         <label for="judul">Judul</label>
@@ -75,12 +37,12 @@
                                     </div>
                                     <div class="md:col-span-5">
                                         <label for="volume_nomer">Volume dan Nomer</label>
-                                        <input type="text" name="volumen_nomer" id="volume_nomer"
+                                        <input type="text" name="volume_dan_nomor" id="volume_dan_nomor"
                                             class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
                                     </div>
                                     <div class="md:col-span-5">
                                         <label for="Halaman">Halaman</label>
-                                        <input type="text" name="Halaman" id="Halaman"
+                                        <input type="text" name="halaman" id="halaman"
                                             class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
                                     </div>
                                     <div class="md:col-span-5">
@@ -96,17 +58,17 @@
                                     <h3 class="font-semibold text-xl text-black">Data Publikasi Seminar</h3>
                                     <div class="md:col-span-5">
                                         <label for="judul">Judul</label>
-                                        <input type="text" name="judul" id="judul"
+                                        <input type="text" name="judul_seminar" id="judul_seminar"
                                             class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
                                     </div>
                                     <div class="md:col-span-5">
                                         <label for="urutan_penulis">Urutan Penulis</label>
-                                        <input type="text" name="urutan_penulis" id="urutan_penulis"
+                                        <input type="text" name="urutan_penulis_seminar" id="urutan_penulis_seminar"
                                             class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
                                     </div>
                                     <div class="md:col-span-5">
                                         <label for="status">Status</label>
-                                        <input type="text" name="status" id="status"
+                                        <input type="text" name="status_seminar" id="status_seminar"
                                             class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
                                     </div>
                                     <div class="md:col-span-5">
@@ -126,12 +88,12 @@
                                     </div>
                                     <div class="md:col-span-5">
                                         <label for="tahun">Tahun</label>
-                                        <input type="text" name="tahun" id="tahun"
+                                        <input type="text" name="tahun_seminar" id="tahun_seminar"
                                             class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
                                     </div>
                                     <div class="md:col-span-5">
                                         <label for="link_dokumen">Link Dokumen</label>
-                                        <input type="text" name="link_dokumen" id="link_dokumen"
+                                        <input type="text" name="link_dokumen_seminar" id="link_dokumen_seminar"
                                             class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
                                     </div>
                                     <div class="md:col-span-5 text-right">
