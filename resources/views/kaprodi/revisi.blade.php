@@ -1,7 +1,7 @@
 <x-temp-layout>
     <div class="max-w-5xl mx-auto bg-third rounded-lg shadow-lg p-6 header-bg my-8">
         <div class="flex justify-between items-center mb-4">
-            <h1 class="text-2xl font-bold text-gray-700">Pengajuan Judul</h1>
+            <h1 class="text-2xl font-bold text-gray-700">Revisi Tesis</h1>
             <div class="flex items-center space-x-4">
                 <input type="text" placeholder="Search" class="border border-gray-300 rounded p-2">
                 <button class="bg-primary text-white px-4 py-2 rounded shadow hover:bg-blue-600">Search</button>
@@ -21,73 +21,50 @@
                             Nama Mahasiswa
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Program Studi
+                            Judul
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Tahun Angkatan
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Tahun Ajaran
+                            Jenis Revisi
                         </th>
                         <th scope="col" class="px-6 py-3">
                             Tanggal Upload
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Semester
+                            File Revisi
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Judul Tesis
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Dosen Pembimbing 1
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Dosen Pembimbing 2
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Dosen Pembimbing 3
+                            Catatan
                         </th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($judul as $judul)
+                    @foreach ($revisi as $revisi)
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                             <th scope="row"
                                 class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 {{ $loop->iteration }}
                             </th>
                             <td class="px-6 py-4">
-                                {{ $judul->nrp }}
+                                {{ $revisi->nrp }}
                             </td>
                             <td class="px-6 py-4">
-                                {{ $judul->nama }}
+                                {{ $revisi->nama }}
                             </td>
                             <td class="px-6 py-4">
-                                {{ $judul->prodi }}
+                                {{ $revisi->judul }}
                             </td>
                             <td class="px-6 py-4">
-                                {{ $judul->tahun_angkatan }}
+                                {{ $revisi->jenis_seminar }}
                             </td>
                             <td class="px-6 py-4">
-                                {{ $judul->tahun_ajaran }}
+                                {{ $revisi->tanggal_upload }}
+                            </td>
+                            <td class="border p-2 text-center icon-cell">
+                                <a href="{{ asset('storage/' . $revisi->file_revisi) }}" target="_blank"><i
+                                        class="fa fa-file"></i></a>
                             </td>
                             <td class="px-6 py-4">
-                                {{ $judul->tanggal_upload }}
-                            </td>
-                            <td class="px-6 py-4">
-                                {{ $judul->semester }}
-                            </td>
-                            <td class="px-6 py-4">
-                                {{ $judul->judul_penelitian }}
-                            </td>
-                            <td class="px-6 py-4">
-                                {{ $judul->dosen_pembimbing1 }}
-                            </td>
-                            <td class="px-6 py-4">
-                                {{ $judul->dosen_pembimbing2 }}
-                            </td>
-                            <td class="px-6 py-4">
-                                {{ $judul->dosen_pembimbing3 }}
+                                {{ $revisi->catatan }}
                             </td>
                         </tr>
                     @endforeach

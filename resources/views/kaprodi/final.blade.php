@@ -1,7 +1,7 @@
 <x-temp-layout>
     <div class="max-w-5xl mx-auto bg-third rounded-lg shadow-lg p-6 header-bg my-8">
         <div class="flex justify-between items-center mb-4">
-            <h1 class="text-2xl font-bold text-gray-700">Pengajuan Judul</h1>
+            <h1 class="text-2xl font-bold text-gray-700">Final Tesis</h1>
             <div class="flex items-center space-x-4">
                 <input type="text" placeholder="Search" class="border border-gray-300 rounded p-2">
                 <button class="bg-primary text-white px-4 py-2 rounded shadow hover:bg-blue-600">Search</button>
@@ -21,73 +21,67 @@
                             Nama Mahasiswa
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Program Studi
+                            Judul
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Tahun Angkatan
+                            Laporan
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Tahun Ajaran
+                            Penerima Naskah
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Tanggal Upload
+                            Persetujuan Maju Sidang
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Semester
+                            Lembar Monitoring
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Judul Tesis
+                            PPT
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Dosen Pembimbing 1
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Dosen Pembimbing 2
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Dosen Pembimbing 3
+                            Video
                         </th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($judul as $judul)
+                    @foreach ($final as $final)
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                             <th scope="row"
                                 class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 {{ $loop->iteration }}
                             </th>
                             <td class="px-6 py-4">
-                                {{ $judul->nrp }}
+                                {{ $final->nrp }}
                             </td>
                             <td class="px-6 py-4">
-                                {{ $judul->nama }}
+                                {{ $final->nama }}
                             </td>
                             <td class="px-6 py-4">
-                                {{ $judul->prodi }}
+                                {{ $final->judul }}
                             </td>
-                            <td class="px-6 py-4">
-                                {{ $judul->tahun_angkatan }}
+                            <td class="border p-2 text-center icon-cell">
+                                <a href="{{ asset('storage/' . $final->laporan) }}" target="_blank"><i
+                                        class="fa fa-file"></i></a>
                             </td>
-                            <td class="px-6 py-4">
-                                {{ $judul->tahun_ajaran }}
+                            <td class="border p-2 text-center icon-cell">
+                                <a href="{{ asset('storage/' . $final->penerima_naskah) }}" target="_blank"><i
+                                        class="fa fa-file"></i></a>
                             </td>
-                            <td class="px-6 py-4">
-                                {{ $judul->tanggal_upload }}
+                            <td class="border p-2 text-center icon-cell">
+                                <a href="{{ asset('storage/' . $final->seminar_tesis) }}" target="_blank"><i
+                                        class="fa fa-file"></i></a>
                             </td>
-                            <td class="px-6 py-4">
-                                {{ $judul->semester }}
+                            <td class="border p-2 text-center icon-cell">
+                                <a href="{{ asset('storage/' . $final->lembar_monitoring) }}" target="_blank"><i
+                                        class="fa fa-file"></i></a>
                             </td>
-                            <td class="px-6 py-4">
-                                {{ $judul->judul_penelitian }}
+                            <td class="border p-2 text-center icon-cell">
+                                <a href="{{ asset('storage/' . $final->ppt) }}" target="_blank"><i
+                                        class="fa fa-file"></i></a>
                             </td>
-                            <td class="px-6 py-4">
-                                {{ $judul->dosen_pembimbing1 }}
-                            </td>
-                            <td class="px-6 py-4">
-                                {{ $judul->dosen_pembimbing2 }}
-                            </td>
-                            <td class="px-6 py-4">
-                                {{ $judul->dosen_pembimbing3 }}
+                            <td class="border p-2 text-center icon-cell">
+                                <a href="{{ asset('storage/' . $final->video) }}" target="_blank"><i
+                                        class="fa fa-file"></i></a>
                             </td>
                         </tr>
                     @endforeach

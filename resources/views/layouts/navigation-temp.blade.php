@@ -49,19 +49,19 @@
                                 <x-dropdown-link :href="route('kaprodi.pengajuan-judul')">
                                     {{ __('Pengajuan Judul') }}
                                 </x-dropdown-link>
-                                <x-dropdown-link>
+                                <x-dropdown-link :href="route('kaprodi.seminar-proposal')">
                                     {{ __('Seminar Proposal') }}
                                 </x-dropdown-link>
-                                <x-dropdown-link>
+                                <x-dropdown-link :href="route('kaprodi.progress')">
                                     {{ __('Progress Tesis') }}
                                 </x-dropdown-link>
-                                <x-dropdown-link>
+                                <x-dropdown-link :href="route('kaprodi.final')">
                                     {{ __('Final Tesis') }}
                                 </x-dropdown-link>
-                                <x-dropdown-link>
+                                <x-dropdown-link :href="route('kaprodi.revisi')">
                                     {{ __('Revisi') }}
                                 </x-dropdown-link>
-                                <x-dropdown-link>
+                                <x-dropdown-link :href="route('kaprodi.publikasi')">
                                     {{ __('Publikasi') }}
                                 </x-dropdown-link>
                             </x-slot>

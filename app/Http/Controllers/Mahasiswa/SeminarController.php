@@ -38,11 +38,11 @@ class SeminarController extends Controller
 
         $proposal->fill($validatedData);
 
-        $proposal->laporan = $request->file('laporan')->store('laporan');
-        $proposal->penerima_naskah = $request->file('penerima_naskah')->store('penerima-naskah');
-        $proposal->seminar_tesis = $request->file('seminar_tesis')->store('seminar-tesis');
-        $proposal->lembar_monitoring = $request->file('lembar_monitoring')->store('lembar-monitoring');
-        $proposal->ppt = $request->file('ppt')->store('ppt');
+        $proposal->laporan = $request->file('laporan')->store('laporan', 'public');
+        $proposal->penerima_naskah = $request->file('penerima_naskah')->store('penerima-naskah', 'public');
+        $proposal->seminar_tesis = $request->file('seminar_tesis')->store('seminar-tesis', 'public');
+        $proposal->lembar_monitoring = $request->file('lembar_monitoring')->store('lembar-monitoring', 'public');
+        $proposal->ppt = $request->file('ppt')->store('ppt', 'public');
 
         $proposal->save();
 
@@ -59,12 +59,12 @@ class SeminarController extends Controller
         $progress->fill($validatedData);
 
         $progress->kategori_id = Kategori::where('nama', $progress->kategori_id)->first()->id;
-        $progress->laporan = $request->file('laporan')->store('laporan');
-        $progress->penerima_naskah = $request->file('penerima_naskah')->store('penerima-naskah');
-        $progress->seminar_tesis = $request->file('seminar_tesis')->store('seminar-tesis');
-        $progress->lembar_monitoring = $request->file('lembar_monitoring')->store('lembar-monitoring');
-        $progress->ppt = $request->file('ppt')->store('ppt');
-        $progress->video_demo = $request->file('video_demo')->store('video-demo');
+        $progress->laporan = $request->file('laporan')->store('laporan', 'public');
+        $progress->penerima_naskah = $request->file('penerima_naskah')->store('penerima-naskah', 'public');
+        $progress->seminar_tesis = $request->file('seminar_tesis')->store('seminar-tesis', 'public');
+        $progress->lembar_monitoring = $request->file('lembar_monitoring')->store('lembar-monitoring', 'public');
+        $progress->ppt = $request->file('ppt')->store('ppt', 'public');
+        $progress->video_demo = $request->file('video_demo')->store('video-demo', 'public');
 
         $progress->save();
 
@@ -80,12 +80,12 @@ class SeminarController extends Controller
         $final->kategori_id = Kategori::where('nama', 'final')->first()->id;
         $final->fill($validatedData);
 
-        $final->laporan = $request->file('laporan')->store('laporan');
-        $final->penerima_naskah = $request->file('penerima_naskah')->store('penerima-naskah');
-        $final->seminar_tesis = $request->file('seminar_tesis')->store('seminar-tesis');
-        $final->lembar_monitoring = $request->file('lembar_monitoring')->store('lembar-monitoring');
-        $final->ppt = $request->file('ppt')->store('ppt');
-        $final->video_demo = $request->file('video_demo')->store('video-demo');
+        $final->laporan = $request->file('laporan')->store('laporan', 'public');
+        $final->penerima_naskah = $request->file('penerima_naskah')->store('penerima-naskah', 'public');
+        $final->seminar_tesis = $request->file('seminar_tesis')->store('seminar-tesis', 'public');
+        $final->lembar_monitoring = $request->file('lembar_monitoring')->store('lembar-monitoring', 'public');
+        $final->ppt = $request->file('ppt')->store('ppt', 'public');
+        $final->video_demo = $request->file('video_demo')->store('video-demo', 'public');
 
         $final->save();
 

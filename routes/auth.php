@@ -16,7 +16,9 @@ Route::middleware('guest')->group(function () {
     //             ->name('register');
 
     // Route::post('register', [RegisteredUserController::class, 'store']);
-
+    Route::get('login', function () {
+        redirect()->route('landing');
+    })->name('login');
     Route::get('login-mahasiswa', [AuthenticatedSessionController::class, 'createMahasiswa'])->name('login.mahasiswa');
     Route::get('login-kaprodi', [AuthenticatedSessionController::class, 'createKaprodi'])->name('login.kaprodi');
 

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Kaprodi\DashboardController;
 use App\Http\Controllers\Mahasiswa\DashboradController;
 use App\Http\Controllers\Mahasiswa\DataPublikasiController;
 use App\Http\Controllers\Mahasiswa\JudulController;
@@ -44,7 +45,6 @@ Route::middleware('auth')->group(function () {
         Route::get('/', [DashboradController::class, 'index'])->name('dashboard');
         Route::prefix('/pengajuan-judul')->name('pengajuan-judul')->group(function () {
             Route::get('/', [JudulController::class, 'create']);
-            // Route::get('/judul', [JudulController::class, 'store']);
             Route::post('/', [JudulController::class, 'store']);
         });
         Route::prefix('/seminar-proposal')->name('seminar-proposal')->group(function () {
@@ -75,16 +75,15 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::prefix('kaprodi')->name('kaprodi.')->group(function () {
-        Route::get('/', function () {
-            return view('kaprodi/dashboard');
-        })->name('dashboard');
-        Route::get('/pengajuan-judul', function () {
-            return view('kaprodi/pengajuan-judul');
-        })->name('pengajuan-judul');
+        Route::get('/', [DashboardController::class, 'dashboard'])->name('dashboard');
+        Route::get('/pengajuan-judul', [DashboardController::class, 'pengajuanJudul'])->name('pengajuan-judul');
+        Route::get('/seminar-proposal', [DashboardController::class, 'seminarProposal'])->name('seminar-proposal');
+        Route::get('/progress-tesis', [DashboardController::class, 'progressTesis'])->name('progress');
+        Route::get('/final-tesis', [DashboardController::class, 'finalTesis'])->name('final');
+        Route::get('/revisi', [DashboardController::class, 'revisi'])->name('revisi');
+        Route::get('/publikasi', [DashboardController::class, 'publikasi'])->name('publikasi');
     });
 });
-
-
 
 Route::get('/bukti', function () {
     return view('Front/Bukti-publikasi');

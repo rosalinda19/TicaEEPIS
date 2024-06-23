@@ -1,7 +1,7 @@
 <x-temp-layout>
     <div class="max-w-5xl mx-auto bg-third rounded-lg shadow-lg p-6 header-bg my-8">
         <div class="flex justify-between items-center mb-4">
-            <h1 class="text-2xl font-bold text-gray-700">Pengajuan Judul</h1>
+            <h1 class="text-2xl font-bold text-gray-700">Progress Tesis</h1>
             <div class="flex items-center space-x-4">
                 <input type="text" placeholder="Search" class="border border-gray-300 rounded p-2">
                 <button class="bg-primary text-white px-4 py-2 rounded shadow hover:bg-blue-600">Search</button>
@@ -21,73 +21,73 @@
                             Nama Mahasiswa
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Program Studi
+                            Judul
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Tahun Angkatan
+                            Jenis Progress
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Tahun Ajaran
+                            Laporan Proposal
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Tanggal Upload
+                            Penerima Naskah
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Semester
+                            Persetujuan Maju Sidang
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Judul Tesis
+                            Lembar Monitoring
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Dosen Pembimbing 1
+                            PPT
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Dosen Pembimbing 2
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Dosen Pembimbing 3
+                            Video
                         </th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($judul as $judul)
+                    @foreach ($progress as $progress)
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                             <th scope="row"
                                 class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 {{ $loop->iteration }}
                             </th>
                             <td class="px-6 py-4">
-                                {{ $judul->nrp }}
+                                {{ $progress->nrp }}
                             </td>
                             <td class="px-6 py-4">
-                                {{ $judul->nama }}
+                                {{ $progress->nama }}
                             </td>
                             <td class="px-6 py-4">
-                                {{ $judul->prodi }}
+                                {{ $progress->judul }}
                             </td>
                             <td class="px-6 py-4">
-                                {{ $judul->tahun_angkatan }}
+                                {{ $progress->jenis_progress }}
                             </td>
-                            <td class="px-6 py-4">
-                                {{ $judul->tahun_ajaran }}
+                            <td class="border p-2 text-center icon-cell">
+                                <a href="{{ asset('storage/' . $progress->laporan) }}" target="_blank"><i
+                                        class="fa fa-file"></i></a>
                             </td>
-                            <td class="px-6 py-4">
-                                {{ $judul->tanggal_upload }}
+                            <td class="border p-2 text-center icon-cell">
+                                <a href="{{ asset('storage/' . $progress->penerima_naskah) }}" target="_blank"><i
+                                        class="fa fa-file"></i></a>
                             </td>
-                            <td class="px-6 py-4">
-                                {{ $judul->semester }}
+                            <td class="border p-2 text-center icon-cell">
+                                <a href="{{ asset('storage/' . $progress->seminar_tesis) }}" target="_blank"><i
+                                        class="fa fa-file"></i></a>
                             </td>
-                            <td class="px-6 py-4">
-                                {{ $judul->judul_penelitian }}
+                            <td class="border p-2 text-center icon-cell">
+                                <a href="{{ asset('storage/' . $progress->lembar_monitoring) }}" target="_blank"><i
+                                        class="fa fa-file"></i></a>
                             </td>
-                            <td class="px-6 py-4">
-                                {{ $judul->dosen_pembimbing1 }}
+                            <td class="border p-2 text-center icon-cell">
+                                <a href="{{ asset('storage/' . $progress->ppt) }}" target="_blank"><i
+                                        class="fa fa-file"></i></a>
                             </td>
-                            <td class="px-6 py-4">
-                                {{ $judul->dosen_pembimbing2 }}
-                            </td>
-                            <td class="px-6 py-4">
-                                {{ $judul->dosen_pembimbing3 }}
+                            <td class="border p-2 text-center icon-cell">
+                                <a href="{{ asset('storage/' . $progress->video) }}" target="_blank"><i
+                                        class="fa fa-file"></i></a>
                             </td>
                         </tr>
                     @endforeach
