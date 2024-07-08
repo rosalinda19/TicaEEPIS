@@ -38,9 +38,11 @@
                  </div>
                  <div class="flex flex-col text-center">
                      <div class="inline-flex items-end m-2" style="justify-content: center;">
-                         <button onclick="window.location.href='logout'"
-                             class="bg-blue-900 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                             type="button">Exit</button>
+                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('mahasiswa.dashboard', 'kaprodi.dashboard')">
+                            <button
+                                class="bg-blue-900 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                                type="button">Exit</button>
+                        </x-nav-link>
                      </div>
                  </div>
              </div>

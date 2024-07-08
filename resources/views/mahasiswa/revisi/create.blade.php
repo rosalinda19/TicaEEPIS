@@ -25,7 +25,7 @@
                                     <div class="md:col-span-5">
                                         <label for="file_revisi">File Revisi</label>
                                         <input type="file" name="file_revisi" id="file_revisi"
-                                            class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
+                                            style="padding-top: 7.4px; padding-bottom:7.4px" class="border mt-1 rounded px-4 w-full bg-gray-50" value="" />
                                     </div>
                                     <div class="md:col-span-5">
                                         <label for="catatan">Catatan</label>
@@ -34,12 +34,18 @@
                                     </div>
                                     <div class="md:col-span-5 text-right">
                                         <div class="inline-flex items-end">
-                                            <button
-                                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                                                type="button">Exit</button>
-                                            <button
-                                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                                                type="submit">Submit</button>
+                                            <div>
+                                                <x-nav-link :href="route('dashboard')" :active="request()->routeIs('mahasiswa.dashboard', 'kaprodi.dashboard')">
+                                                    <button
+                                                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                                                        type="button">Exit</button>
+                                                </x-nav-link>
+                                            </div>
+                                            <div>
+                                                <button
+                                                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                                                    type="submit">Submit</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

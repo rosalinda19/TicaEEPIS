@@ -79,12 +79,18 @@
                                     </div>
                                     <div class="md:col-span-5 text-right">
                                         <div class="inline-flex items-end">
-                                            <button
-                                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                                                type="button">Exit</button>
-                                            <button
-                                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                                                type="submit">Submit</button>
+                                            <div>
+                                                <x-nav-link :href="route('dashboard')" :active="request()->routeIs('mahasiswa.dashboard', 'kaprodi.dashboard')">
+                                                    <button
+                                                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                                                        type="button">Exit</button>
+                                                </x-nav-link>
+                                            </div>
+                                            <div>
+                                                <button
+                                                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                                                    type="submit">Submit</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -96,3 +102,9 @@
         </div>
     </div>
 </x-temp-layout>
+
+<style>
+    xnaf-margin{
+        margin-top: 1px;
+    }
+    </style>

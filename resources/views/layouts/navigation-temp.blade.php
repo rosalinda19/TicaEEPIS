@@ -27,7 +27,7 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
-                @if (Request::is('kaprodi*'))
+                @if (Request::is('kaprodi*') || auth()->user()->hasRole('kaprodi'))
                     <div class="hidden sm:flex sm:items-center sm:ms-6">
                         <x-dropdown align="centre" width="48">
                             <x-slot name="trigger">
@@ -63,12 +63,12 @@
                                 </x-dropdown-link>
                                 <x-dropdown-link :href="route('kaprodi.publikasi')">
                                     {{ __('Publikasi') }}
-                                </x-dropdown-link>
+                                </x-dropdown-link>        
                             </x-slot>
                         </x-dropdown>
                     </div>
                 @endif
-                @if (Request::is('mahasiswa*'))
+                @if (Request::is('mahasiswa*') || auth()->user()->hasRole('mahasiswa'))
                     <div class="hidden sm:flex sm:items-center sm:ms-6">
                         <x-dropdown align="centre" width="48">
                             <x-slot name="trigger">

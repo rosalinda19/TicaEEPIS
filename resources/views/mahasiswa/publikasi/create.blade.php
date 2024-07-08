@@ -4,7 +4,7 @@
             <div>
                 <div class="bg-third rounded shadow-lg p-4 px-4 md:p-8 mb-6">
                     <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
-                        <h2 class="font-semibold text-xl text-black">Pengajuan Judul</h2>
+                        
                         <div class="lg:col-span-3">
                             <form method="POST" action="{{ route('mahasiswa.publikasi') }}" enctype="multipart/form-data">
                                 @csrf
@@ -98,12 +98,18 @@
                                     </div>
                                     <div class="md:col-span-5 text-right">
                                         <div class="inline-flex items-end">
-                                            <button onclick="window.history.back()"
-                                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                                                type="button">Kembali</button>
-                                            <button
-                                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                                                type="submit">Kirim</button>
+                                            <div>
+                                                <x-nav-link :href="route('dashboard')" :active="request()->routeIs('mahasiswa.dashboard', 'kaprodi.dashboard')">
+                                                    <button
+                                                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                                                        type="button">Exit</button>
+                                                </x-nav-link>
+                                            </div>
+                                            <div>
+                                                <button
+                                                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                                                    type="submit">Kirim</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

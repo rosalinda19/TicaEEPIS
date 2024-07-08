@@ -17,6 +17,93 @@
                     </x-nav-link>
                 </div>
             </div>
+            @if (Request::is('kaprodi*') || auth()->user()->hasRole('kaprodi'))
+            <div class="hidden sm:flex sm:items-center sm:ms-6">
+                <x-dropdown align="centre" width="48">
+                    <x-slot name="trigger">
+                        <button
+                            class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white dark:text-white bg-primary dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
+                            <div>Menu Pengguna</div>
+                            <div class="ms-1">
+                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </button>
+                    </x-slot>
+
+                    <x-slot name="content">
+                        <x-dropdown-link :href="route('kaprodi.pengajuan-judul')">
+                            {{ __('Pengajuan Judul') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link :href="route('kaprodi.seminar-proposal')">
+                            {{ __('Seminar Proposal') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link :href="route('kaprodi.progress')">
+                            {{ __('Progress Tesis') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link :href="route('kaprodi.final')">
+                            {{ __('Final Tesis') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link :href="route('kaprodi.revisi')">
+                            {{ __('Revisi') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link :href="route('kaprodi.publikasi')">
+                            {{ __('Publikasi') }}
+                        </x-dropdown-link>
+                        
+                    </x-slot>
+                </x-dropdown>
+            </div>
+        @endif
+        @if (Request::is('mahasiswa*') || auth()->user()->hasRole('mahasiswa'))
+            <div class="hidden sm:flex sm:items-center sm:ms-6">
+                <x-dropdown align="centre" width="48">
+                    <x-slot name="trigger">
+                        <button
+                            class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white dark:text-white bg-primary dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
+                            <div>Menu Pengguna</div>
+                            <div class="ms-1">
+                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </button>
+                    </x-slot>
+
+                    <x-slot name="content">
+                        <x-dropdown-link :href="route('mahasiswa.pengajuan-judul')">
+                            {{ __('Pengajuan Judul') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link :href="route('mahasiswa.seminar-proposal')">
+                            {{ __('Seminar Proposal') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link :href="route('mahasiswa.progress-tesis')">
+                            {{ __('Progress Tesis') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link :href="route('mahasiswa.final-tesis')">
+                            {{ __('Final Tesis') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link :href="route('mahasiswa.revisi')">
+                            {{ __('Revisi') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link :href="route('mahasiswa.publikasi')">
+                            {{ __('Publikasi') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link :href="route('mahasiswa.data-publikasi')">
+                            {{ __('Upload Publikasi') }}
+                        </x-dropdown-link>
+                        
+                    </x-slot>
+                </x-dropdown>
+            </div>
+        @endif
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">

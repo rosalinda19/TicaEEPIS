@@ -19,36 +19,42 @@
                                     <div class="md:col-span-5">
                                         <label for="laporan">Laporan Proposal</label>
                                         <input type="file" name="laporan" id="laporan"
-                                            class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
+                                            style="padding-top: 7.4px; padding-bottom:7.4px" class=" border mt-1 rounded px-4 w-full bg-gray-50" value="" />
                                     </div>
                                     <div class="md:col-span-5">
                                         <label for="penerima_naskah">Penerima Naskah</label>
                                         <input type="file" name="penerima_naskah" id="penerima_naskah"
-                                            class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
+                                            style="padding-top: 7.4px; padding-bottom:7.4px" class=" border mt-1 rounded px-4 w-full bg-gray-50" value="" />
                                     </div>
                                     <div class="md:col-span-5">
                                         <label for="seminar_tesis">Seminar Tesis</label>
                                         <input type="file" name="seminar_tesis" id="seminar_tesis"
-                                            class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
+                                            style="padding-top: 7.4px; padding-bottom:7.4px" class=" border mt-1 rounded px-4 w-full bg-gray-50" value="" />
                                     </div>
                                     <div class="md:col-span-5">
                                         <label for="lembar_monitoring">Lembar Monitoring</label>
                                         <input type="file" name="lembar_monitoring" id="lembar_monitoring"
-                                            class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
+                                            style="padding-top: 7.4px; padding-bottom:7.4px" class=" border mt-1 rounded px-4 w-full bg-gray-50" value="" />
                                     </div>
                                     <div class="md:col-span-5">
                                         <label for="ppt">PPT</label>
                                         <input type="file" name="ppt" id="ppt"
-                                            class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
+                                            style="padding-top: 7.4px; padding-bottom:7.4px" class=" border mt-1 rounded px-4 w-full bg-gray-50" value="" />
                                     </div>
                                     <div class="md:col-span-5 text-right">
                                         <div class="inline-flex items-end">
-                                            <button onclick="window.location.href='dashboard'"
-                                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                                                type="button">Exit</button>
-                                            <button
-                                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                                                type="submit">Submit</button>
+                                            <div>
+                                                <x-nav-link :href="route('dashboard')" :active="request()->routeIs('mahasiswa.dashboard', 'kaprodi.dashboard')">
+                                                    <button
+                                                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                                                        type="button">Exit</button>
+                                                </x-nav-link>
+                                            </div>
+                                            <div>
+                                                <button
+                                                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                                                    type="submit">Submit</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
