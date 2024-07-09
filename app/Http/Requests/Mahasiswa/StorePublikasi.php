@@ -38,7 +38,7 @@ class StorePublikasi extends FormRequest
             'nama_seminar' => ['required', 'string', 'max:255'],
             'penyelenggara' => ['required', 'string', 'max:255'],
             'tahun_seminar' => ['required', 'string', 'max:255'],
-            'link_dokumen_seminar' => ['required', 'string', 'max:255']
+            'link_dokumen_seminar' => ['required', 'string', 'max:255'],
         ];
     }
 }

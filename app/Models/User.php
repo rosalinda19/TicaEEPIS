@@ -53,6 +53,7 @@ class User extends Authenticatable
     {
         return $this->hasMany(DataPublikasi::class, 'mahasiswa');
     }
+
     public function programStudi()
     {
         return $this->belongsTo(ProgramStudi::class, 'program_studi_id');

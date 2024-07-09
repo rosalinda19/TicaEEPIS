@@ -20,6 +20,7 @@ class JudulController extends Controller
         $judul->fill($validatedData);
         $judul->mahasiswa_id = auth()->id();
         $judul->save();
+
         return redirect()->route('mahasiswa.dashboard');
     }
 }

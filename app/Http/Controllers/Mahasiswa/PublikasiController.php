@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Mahasiswa;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Mahasiswa\StorePublikasi;
 use App\Models\Judul;
 use App\Models\Publikasi;
 use App\Models\User;

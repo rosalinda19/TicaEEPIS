@@ -9,7 +9,6 @@ use App\Http\Controllers\Mahasiswa\PublikasiController;
 use App\Http\Controllers\Mahasiswa\RevisiController;
 use App\Http\Controllers\Mahasiswa\SeminarController;
 use App\Http\Controllers\ProfileController;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,7 +26,6 @@ Route::get('/', function () {
     return view('welcome');
 })->name('landing');
 
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -43,6 +41,7 @@ Route::middleware('auth')->group(function () {
 
     Route::prefix('mahasiswa')->name('mahasiswa.')->group(function () {
         Route::get('/', [DashboradController::class, 'index'])->name('dashboard');
+        Route::get('/detail/{id}', [DashboradController::class, 'detail'])->name('detail');
         Route::prefix('/pengajuan-judul')->name('pengajuan-judul')->group(function () {
             Route::get('/', [JudulController::class, 'create']);
             Route::post('/', [JudulController::class, 'store']);

@@ -30,6 +30,7 @@ class DashboardController extends Controller
             $i->tanggal_upload = Carbon::parse($i->created_at)->format('d-m-Y');
             $i->prodi = ProgramStudi::where('id', $mahasiswa->program_studi_id)->first()->nama;
         }
+
         return view('kaprodi.pengajuan-judul', ['judul' => $judul]);
     }
 
@@ -43,6 +44,7 @@ class DashboardController extends Controller
             $i->nama = $mahasiswa->name;
             $i->judul = $judul->judul_penelitian;
         }
+
         return view('kaprodi.proposal', ['proposal' => $proposal]);
     }
 
@@ -57,6 +59,7 @@ class DashboardController extends Controller
             $i->nama = $mahasiswa->name;
             $i->judul = $judul->judul_penelitian;
         }
+
         return view('kaprodi.progress', ['progress' => $progress]);
     }
 
@@ -70,6 +73,7 @@ class DashboardController extends Controller
             $i->nama = $mahasiswa->name;
             $i->judul = $judul->judul_penelitian;
         }
+
         return view('kaprodi.final', ['final' => $final]);
     }
 
@@ -86,6 +90,7 @@ class DashboardController extends Controller
             $i->tanggal_upload = Carbon::parse($i->created_at)->format('d-m-Y');
             $i->jenis_seminar = Kategori::where('id', $seminar->kategori_id)->first()->nama;
         }
+
         return view('kaprodi.revisi', ['revisi' => $revisi]);
     }
 
@@ -103,6 +108,7 @@ class DashboardController extends Controller
             $i->dosen_pembimbing2 = $judul->dosen_pembimbing2;
             $i->dosen_pembimbing3 = $judul->dosen_pembimbing3;
         }
+
         return view('kaprodi.publikasi', ['publikasi' => $publikasi]);
     }
 
@@ -110,14 +116,14 @@ class DashboardController extends Controller
     {
         $query = $request->input('query');
 
-        $mahasiswa = User::where('nrp', 'LIKE', '%' . $query . '%')
-            ->orWhere('name', 'LIKE', '%' . $query . '%')
+        $mahasiswa = User::where('nrp', 'LIKE', '%'.$query.'%')
+            ->orWhere('name', 'LIKE', '%'.$query.'%')
             ->first();
 
-        $judulQuery = Judul::where('judul_penelitian', 'LIKE', '%' . $query . '%')
-            ->orWhere('dosen_pembimbing1', 'LIKE', '%' . $query . '%')
-            ->orWhere('dosen_pembimbing2', 'LIKE', '%' . $query . '%')
-            ->orWhere('dosen_pembimbing3', 'LIKE', '%' . $query . '%');
+        $judulQuery = Judul::where('judul_penelitian', 'LIKE', '%'.$query.'%')
+            ->orWhere('dosen_pembimbing1', 'LIKE', '%'.$query.'%')
+            ->orWhere('dosen_pembimbing2', 'LIKE', '%'.$query.'%')
+            ->orWhere('dosen_pembimbing3', 'LIKE', '%'.$query.'%');
 
         if ($mahasiswa) {
             $judulQuery->orWhere('mahasiswa_id', $mahasiswa->id);
@@ -132,6 +138,7 @@ class DashboardController extends Controller
             $i->prodi = ProgramStudi::where('id', $mahasiswa->program_studi_id)->first()->nama;
         }
         $count = count($judul);
+
         return view('kaprodi.judul-search', ['judul' => $judul, 'count' => $count]);
     }
 
@@ -140,10 +147,10 @@ class DashboardController extends Controller
         $query = $request->input('query'); // Ambil kata kunci pencarian dari input
 
         // Query pencarian berdasarkan kolom yang relevan pada model Judul
-        $results = Judul::where('nama', 'LIKE', '%' . $query . '%')
-            ->orWhere('nrp', 'LIKE', '%' . $query . '%')
-            ->orWhere('prodi', 'LIKE', '%' . $query . '%')
-            ->orWhere('judul_penelitian', 'LIKE', '%' . $query . '%')
+        $results = Judul::where('nama', 'LIKE', '%'.$query.'%')
+            ->orWhere('nrp', 'LIKE', '%'.$query.'%')
+            ->orWhere('prodi', 'LIKE', '%'.$query.'%')
+            ->orWhere('judul_penelitian', 'LIKE', '%'.$query.'%')
             ->get();
 
         // Kirim hasil pencarian ke view dalam bentuk HTML untuk diperbarui dengan jQuery

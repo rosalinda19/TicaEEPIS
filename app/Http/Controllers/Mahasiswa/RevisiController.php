@@ -8,7 +8,6 @@ use App\Models\Judul;
 use App\Models\Kategori;
 use App\Models\Revisi;
 use App\Models\Seminar;
-use Illuminate\Support\Facades\Auth;
 
 class RevisiController extends Controller
 {
@@ -27,6 +26,7 @@ class RevisiController extends Controller
         $revisi->seminar_id = Seminar::where('judul_id', $judul_id)->where('kategori_id', $kategori_id)->first()->id;
         $revisi->file_revisi = $request->file('file_revisi')->store('file-revisi', 'public');
         $revisi->save();
+
         return redirect()->route('mahasiswa.dashboard');
     }
 }

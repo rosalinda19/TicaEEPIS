@@ -9,7 +9,6 @@ use App\Http\Requests\Mahasiswa\StoreProposal;
 use App\Models\Judul;
 use App\Models\Kategori;
 use App\Models\Seminar;
-use Illuminate\Http\Request;
 
 class SeminarController extends Controller
 {

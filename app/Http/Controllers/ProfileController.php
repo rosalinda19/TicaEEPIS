@@ -20,6 +20,7 @@ class ProfileController extends Controller
         $user = $request->user();
         $prodiID = $user->program_studi_id;
         $prodi = ProgramStudi::where('id', $prodiID)->first();
+
         return view('profile.edit', compact(
             'user',
             'prodi'
