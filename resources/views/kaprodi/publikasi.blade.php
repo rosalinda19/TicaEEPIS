@@ -83,24 +83,76 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                        <th scope="row"
-                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            1
-                        </th>
-                        <td class="px-6 py-4">
-                            3120600002
-                        </td>
-                        <td class="px-6 py-4">
-                            Klasifikasi Neural Network Untuk Meperkirakan Tingkat Gagal Panen Tanaman Jagung
-                        </td>
-                        <td class="border p-2 text-center icon-cell"><i class="fa fa-file"></i></td>
-                        <td class="border p-2 text-center icon-cell"><i class="fa fa-file"></i></td>
-                        <td class="border p-2 text-center icon-cell"><i class="fa fa-file"></i></td>
-                        <td class="border p-2 text-center icon-cell"><i class="fa fa-file"></i></td>
-                        <td class="border p-2 text-center icon-cell"><i class="fa fa-file"></i></td>
-                        <td class="border p-2 text-center icon-cell"><i class="fa fa-file"></i></td>
-                    </tr>
+                    @foreach ($publikasi as $item)
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                            <th scope="row"
+                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                {{ $loop->iteration }}
+                            </th>
+                            <td class="px-6 py-4">
+                                {{ $item->nrp }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $item->nama }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $item->prodi }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $item->judul }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $item->dosen_pembimbing1 }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $item->dosen_pembimbing2 }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $item->dosen_pembimbing3 }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $item->judul }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $item->status }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $item->jenis_jurnal }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $item->volume_dan_nomor }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $item->halaman }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $item->tahun }}
+                            </td>
+                            <td class="border p-2 text-center icon-cell"><i class="fa fa-file"></i></td>
+                            <td class="px-6 py-4">
+                                {{ $item->judul_seminar }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $item->urutan_penulis_seminar }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $item->status_seminar }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $item->jenis_seminar }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $item->nama_seminar }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $item->penyelenggara }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $item->tahun_seminar }}
+                            </td>
+                            <td class="border p-2 text-center icon-cell"><i class="fa fa-file"></i></td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
