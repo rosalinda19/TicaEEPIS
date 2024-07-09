@@ -16,10 +16,10 @@ class KategoriSeeder extends Seeder
             'nama' => 'proposal',
         ]);
         Kategori::create([
-            'nama' => 'tesis_1',
+            'nama' => 'tesis 1',
         ]);
         Kategori::create([
-            'nama' => 'tesis_2',
+            'nama' => 'tesis 2',
         ]);
         Kategori::create([
             'nama' => 'final',

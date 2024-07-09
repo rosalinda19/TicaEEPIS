@@ -22,45 +22,54 @@
                                             <select id="kategori_id" name="kategori_id"
                                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                                                 <option hidden>Pilih jenis progress</option>
-                                                <option value="tesis_1">Tesis 1</option>
-                                                <option value="tesis_2">Tesis 2</option>
+                                                <option value="tesis 1">Tesis 1</option>
+                                                <option value="tesis 2">Tesis 2</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="md:col-span-5">
                                         <label for="laporan">Laporan Progress</label>
                                         <input type="file" name="laporan" id="laporan"
-                                        style="padding-top: 7.4px; padding-bottom:7.4px" class="border mt-1 rounded px-4 w-full bg-gray-50" value="" />
+                                            style="padding-top: 7.4px; padding-bottom:7.4px"
+                                            class="border mt-1 rounded px-4 w-full bg-gray-50" value="" />
                                     </div>
                                     <div class="md:col-span-5">
                                         <label for="penerima_naskah">Penerima Naskah</label>
                                         <input type="file" name="penerima_naskah" id="penerima_naskah"
-                                            style="padding-top: 7.4px; padding-bottom:7.4px" class=" border mt-1 rounded px-4 w-full bg-gray-50" value="" />
+                                            style="padding-top: 7.4px; padding-bottom:7.4px"
+                                            class=" border mt-1 rounded px-4 w-full bg-gray-50" value="" />
                                     </div>
                                     <div class="md:col-span-5">
                                         <label for="seminar_tesis">Seminar Tesis</label>
                                         <input type="file" name="seminar_tesis" id="seminar_tesis"
-                                            style="padding-top: 7.4px; padding-bottom:7.4px" class=" border mt-1 rounded px-4 w-full bg-gray-50" value="" />
+                                            style="padding-top: 7.4px; padding-bottom:7.4px"
+                                            class=" border mt-1 rounded px-4 w-full bg-gray-50" value="" />
                                     </div>
                                     <div class="md:col-span-5">
                                         <label for="lembar_monitoring">Lembar Monitoring</label>
                                         <input type="file" name="lembar_monitoring" id="lembar_monitoring"
-                                            style="padding-top: 7.4px; padding-bottom:7.4px" class=" border mt-1 rounded px-4 w-full bg-gray-50" value="" />
+                                            style="padding-top: 7.4px; padding-bottom:7.4px"
+                                            class=" border mt-1 rounded px-4 w-full bg-gray-50" value="" />
                                     </div>
                                     <div class="md:col-span-5">
                                         <label for="video_demo">Video Demo</label>
                                         <input type="file" name="video_demo" id="video_demo"
-                                            style="padding-top: 7.4px; padding-bottom:7.4px" class=" border mt-1 rounded px-4 w-full bg-gray-50" value="" />
+                                            style="padding-top: 7.4px; padding-bottom:7.4px"
+                                            class=" border mt-1 rounded px-4 w-full bg-gray-50" value="" />
                                     </div>
                                     <div class="md:col-span-5">
                                         <label for="ppt">PPT</label>
                                         <input type="file" name="ppt" id="ppt"
-                                            style="padding-top: 7.4px; padding-bottom:7.4px" class=" border mt-1 rounded px-4 w-full bg-gray-50" value="" />
+                                            style="padding-top: 7.4px; padding-bottom:7.4px"
+                                            class=" border mt-1 rounded px-4 w-full bg-gray-50" value="" />
                                     </div>
                                     <div class="md:col-span-5 text-right">
                                         <div class="inline-flex items-end ">
                                             <div>
-                                                <x-nav-link :href="route('dashboard')" :active="request()->routeIs('mahasiswa.dashboard', 'kaprodi.dashboard')">
+                                                <x-nav-link :href="route('dashboard')" :active="request()->routeIs(
+                                                    'mahasiswa.dashboard',
+                                                    'kaprodi.dashboard',
+                                                )">
                                                     <button
                                                         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                                                         type="button">Exit</button>

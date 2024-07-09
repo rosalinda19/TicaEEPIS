@@ -57,7 +57,6 @@ class SeminarController extends Controller
 
         $progress->judul_id = Judul::where('mahasiswa_id', auth()->id())->first()->id;
         $progress->fill($validatedData);
-
         $progress->kategori_id = Kategori::where('nama', $progress->kategori_id)->first()->id;
         $progress->laporan = $request->file('laporan')->store('laporan', 'public');
         $progress->penerima_naskah = $request->file('penerima_naskah')->store('penerima-naskah', 'public');

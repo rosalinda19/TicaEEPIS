@@ -20,7 +20,7 @@ class DashboradController extends Controller
             $tesis_2 = "";
             $final = "";
         } else {
-            $proposal = Seminar::where('judul_id', $judul->id)->where('kategori_id', 2)->first();
+            $proposal = Seminar::where('judul_id', $judul->id)->where('kategori_id', 1)->first();
             if (!$proposal) {
                 $proposal = "";
             } else {
