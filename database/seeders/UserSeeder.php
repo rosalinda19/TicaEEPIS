@@ -14,7 +14,7 @@ class UserSeeder extends Seeder
     {
         $mahasiswa = User::create([
             'nrp' => 3120600006,
-            'name' => 'mhs test',
+            'name' => 'rosalinda',
             'email' => 'mhs@tica.id',
             'program_studi_id' => 1,
             'password' => bcrypt('mhs'),
